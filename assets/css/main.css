@@ -26,6 +26,10 @@
 		line-height: 1;
 	}
 
+	dvv {
+    	text-indent: 10%;
+	}
+
 	ol, ul {
 		list-style: none;
 	}
