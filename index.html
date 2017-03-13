@@ -45,7 +45,8 @@
 									</header>
 									<!--div class="features"-->
 										<article>
-											<span class="icon fa-signal"></span>
+											<span class="icon fa-signal"></span> <span class="icon fa-map"></span> 
+											<span class="icon fa-paper-plane"></span>
 											<div class="content">
 												<h3>IndoorNav</h3>
 												<p4>Main language: Java, Python </p4> </br>
@@ -60,17 +61,25 @@
 												• Wifi signal strength based localization. There are many existing technologies/methods. But they either require extra hardware(e.g. Chrono MIT,2016) or can't meet our accuracy requirement(e.g. decision tree, SVM), or require relative long computation time. Thus a new model is required.
 												</br>
 												• Combine image processing (Raspberry Pi + camera) to improve accuracy and reduce computation time, especially user is near an intersection. Through human recognition, we can also achieve flow control.</br>
-												• Evacuation route algorithm design. Our current algorithm blocks all the hallways and rooms, which are directly connected to gunman's location and a cirle with center point of gunman's location and a radius of 20 meters.</br></br> Future improvement:</br> 
+												• Evacuation route algorithm design. Our current algorithm blocks all the hallways and rooms, which are directly connected to gunman's location and a cirle with center point of gunman's location and a radius of 20 meters.</br></br> Future work:</br> 
+												<div style="text-indent: 2em">• Better UI design, multi layouts and SSH connection instead of FTP.</br>
+												<div style="text-indent: 2em">• Introduce time series method, may be able to improve accuracy.</br>
+												<div style="text-indent: 2em">• Current time complexity is O(nˆ2), n is number of points that describe the floor map. Try to optimize to O(nlog(n)) and calculate multi routes simultaneously.
 											</p>
 											</div>
 										</article>
 										<article>
-											<span class="icon fa-file-text"></span>
+											<span class="icon fa-file-text"</span> <span class="icon fa-file-text-o"</span>
+											<span class="icon fa-pie-chart"</span>
 											<div class="content">
 												<h3>Text Semantic Recognition</h3>
-												<p4>Main language: Python</p4>
-												<p>The purpose of this project can be described as following: Something bad happend.(in our research, we use 2014 W.VA chemical spill as example) The governor needs to make a speech about it and he/she wants to receive positive feedback from the public, thus timing and content become very important. We research wants to help him/her to make that decision. </br>
-												One thing I struggled with is to deal with negation and sarcasm. The other thing is that in my opinion, traing dataset is not sufficient. Adding more dataset, e.g. 2010 BP oil spill may improve the result.</p>
+												<p4>Main language: Python</p4></br>
+												<p4>partial results can be seen at <p4><a href = "http://158.121.178.175/">here</a></br>
+												<!--p>The purpose of this project can be described as following: Something bad happend.(in our research, we use 2014 W.VA chemical spill as example) The governor needs to make a speech about it and he/she wants to receive positive feedback from the public, thus timing and content become very important. We research wants to help him/her to make that decision. </br>
+												One thing I struggled with is to deal with negation and sarcasm. The other thing is that in my opinion, traing dataset is not sufficient. Adding more dataset, e.g. 2010 BP oil spill may improve the result.</p-->
+												<p4>My work is mainly on the follwing parts:</br>
+											    • Write Python crawler for twitter and nbc news, utlize 'requests' and 'beautifulsoup4' library. If I write crawlers again, I will try to connect them to the database instead of putting content in a local txt file.</br>
+											    • After extract time, location and other info from the original data via Stanford NER tools,
 											</div>
 										</article>
 										<article>
@@ -78,7 +87,7 @@
 											<div class="content">
 												<h3>Text Simplification</h3>
 												<p4>Main language: Java, Python </p4>
-												<p>This is a co-op project with UMMS, designed for people with CD(cognitive disability). We did two main methods, one is rule-based and the other is machine learning.</p>
+												<!--p>This is a co-op project with UMMS, designed for people with CD(cognitive disability). We did two main methods, one is rule-based and the other is machine learning.</p-->
 											</div>
 										</article>
 										<article>
@@ -94,9 +103,9 @@
 											<div class="content">
 												<h3>Machine Learning Coursework</h3>
 												<p4>Main language: Python, C </p4>
-												<p>Main website: http://imanmk.github.io/MLKDD/ </br>
-													dropbox: https://www.dropbox.com/sh/qu9agmuvcevuynk/AADqs8-getvwxMsJEqSLj6ACa?dl=0 </br>
-													evaluation: http://www.cs.umb.edu/~ding/history/438_638_spring_2016/student.htm </br>
+												<p>Main website: <a href="http://imanmk.github.io/MLKDD/">here</a> </br>
+													dropbox: <a href="https://www.dropbox.com/sh/qu9agmuvcevuynk/AADqs8-getvwxMsJEqSLj6ACa?dl=0">here</a> </br>
+													evaluation: <a href="http://www.cs.umb.edu/~ding/history/438_638_spring_2016/student.htm">here</a> </br>
 													I performed a feature engineering role. And my the biggest contribution to improve RMSE is introduced a new KNN variant. </br>
 													One of the problem we met was that the dataset is large, nearly 1.2 million steps. Training, testing and validation take some amount of time. Our group had no access to server or cloud service like AWS, so our solution is multi-threading and cython. </br>
 													Another one is that we have to decide what methods we will combine into our blender.
