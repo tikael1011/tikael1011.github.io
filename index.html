@@ -69,27 +69,35 @@
 											</div>
 										</article>
 										<article>
-											<span class="icon fa-file-text"</span> <span class="icon fa-file-text-o"</span>
+											<span class="icon fa-file-text"</span> <span class="icon fa-files-o"</span>
 											<span class="icon fa-pie-chart"</span>
 											<div class="content">
 												<h3>Text Semantic Recognition</h3>
 												<p4>Main language: Python</p4></br>
-												<p4>partial results can be seen at <p4><a href = "http://158.121.178.175/">here</a></br>
+												<p4>Partial results can be seen at <p4><a href = "http://158.121.178.175/">here</a></br>
 												<!--p>The purpose of this project can be described as following: Something bad happend.(in our research, we use 2014 W.VA chemical spill as example) The governor needs to make a speech about it and he/she wants to receive positive feedback from the public, thus timing and content become very important. We research wants to help him/her to make that decision. </br>
 												One thing I struggled with is to deal with negation and sarcasm. The other thing is that in my opinion, traing dataset is not sufficient. Adding more dataset, e.g. 2010 BP oil spill may improve the result.</p-->
 												<p4>My work is mainly on the follwing parts:</br>
-											    • Write Python crawler for twitter and nbc news, utlize 'requests' and 'beautifulsoup4' library. If I write crawlers again, I will try to connect them to the database instead of putting content in a local txt file.</br>
-											    • After extract time, location, user and other info from the original data via Stanford NER tools.(for tweet part I roled out 'news' as well) Then I utilize NLTK and K-means to do classification. One problem I met is to deal with negation and sarcasm.</br>
-											    • Generate pie-chart utlize D3.js and histogram utlize matplotlib.</br>
-												</br>Future work:</br>
-											</div>
+											    • Write Python crawler for twitter and nbc news, utlize 'requests' and 'beautifulsoup4' library.</br>
+											    • After extract time, location, user and other info from the original data via Stanford NER tools,(for tweet part I ruled out 'news' as well) I utilize NLTK POS-tagging and <a href="http://http://mpqa.cs.pitt.edu">sentiment vocabulary</a> to extract semantic meaning from the comments.</br>
+											    • Utlize D3.js to generate pie-chart based on K-means classification and utlize matplotlib to generate histogram.</br>
+												</br>Future work:</br>												
+												<div style="text-indent: 2em">• Set up database for crawlers rather than store all the data in a local txt file.
+												<div style="text-indent: 2em">• Utilize machine learning rather than rule-based methond to deal with negation and sarcasm.
+												<div style="text-indent: 2em">• The original research only collects data from 2014 W.VA Chemical Spill and I want to collect data from other event e.g. 2010 BP Spill.
+											</p>
+											</div>										
 										</article>
 										<article>
-											<span class="icon fa-file-archive-o"></span>
+											<span class="icon fa-wheelchair"</span> <span class="icon fa-file-text-o"</span>
+											<span class="icon fa-file-o"></span>
 											<div class="content">
 												<h3>Text Simplification</h3>
-												<p4>Main language: Java, Python </p4>
-												<!--p>This is a co-op project with UMMS, designed for people with CD(cognitive disability). We did two main methods, one is rule-based and the other is machine learning.</p-->
+												<p4>Main language: Java, Python </p4></br>
+												<p4>This is a co-op project with UMMS, designed for people with CD(cognitive disability).</p4></br>
+												<p4>My work is mainly on the follwing parts:</br>
+												• Utlize "word to vector", compare the value of cosø to find synonyms candidates in our dictionary. I tried both NLTK WordNet and our own dictionary, which is generated from the original text.</br>
+												• 												 
 											</div>
 										</article>
 										<article>
@@ -109,8 +117,8 @@
 													dropbox: <a href="https://www.dropbox.com/sh/qu9agmuvcevuynk/AADqs8-getvwxMsJEqSLj6ACa?dl=0">here</a> </br>
 													evaluation: <a href="http://www.cs.umb.edu/~ding/history/438_638_spring_2016/student.htm">here</a> </br>
 													I performed a feature engineering role. And my the biggest contribution to improve RMSE is introduced a new KNN variant. </br>
-													One of the problem we met was that the dataset is large, nearly 1.2 million steps. Training, testing and validation take some amount of time. Our group had no access to server or cloud service like AWS, so our solution is multi-threading and cython. </br>
-													Another one is that we have to decide what methods we will combine into our blender.
+													One of the problems we met was that the dataset is large, nearly 1.2 million steps. Training, testing and validation take some amount of time. Our group had no access to server or cloud service like AWS, so our solution was multi-threading and cython. </br>
+													Another one is that we have to decide what methods we will combine into our blender. It is not about "coefficient_1 * method_1 + coefficient_2 * method_2..." and adjusting/testing coefficients to get a lowest RMSE, but why should we use this method and why should we use this coefficient. Are there any math or logic or realistic meaning behind it? In order to address this, our group read some 100 papers (some are directly from KDD, some are references) and then got final result.
 												</p>
 											</div>
 										</article>
@@ -148,12 +156,8 @@
 												<li><a href="#">ML Coursework</a></li>
 											</ul>
 										</li>
-										<!--li>
-											<span class="opener">Individual Projects</span>
-											<ul>
-
-											</ul>
-										</li-->
+										<li><a href="swe.html">SWE</a></li>
+										<li><a href="ds.html">DS</a></li>
 										<li><a href="trivia.html">Trivia</a></li>										
 									</ul>
 								</nav>
