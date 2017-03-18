@@ -3542,7 +3542,7 @@
 
 	#search form {
 		text-decoration: none;
-		position: relative;
+		position: fixed;
 	}
 
 		#search form:before {
