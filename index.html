@@ -32,7 +32,7 @@
 											<h1>Dissipating<br />
 											Jie's website</h1>
 										</header>
-										<p>I am a CS major master student in Umass Boston,graduating May 2017.
+										<p>I am a CS major master student at Umass Boston, graduating May 2017.
 											I want to be a software engineer or data scientist. This website is mainly about
 											projects I have done or am doing. I stick to NDA, so no worries. "TRIVIA" contains description of each projects. Construciton is undergoing.</p>
 									</div>
@@ -45,7 +45,7 @@
 									</header>
 									<!--div class="features"-->
 										<article>
-											<span class="icon fa-signal"></span> <span class="icon fa-map"></span> 
+											<span class="icon fa-wifi"></span> <span class="icon fa-map"></span> 
 											<span class="icon fa-paper-plane"></span>
 											<div class="content">
 												<h3>IndoorNav</h3>
@@ -97,26 +97,37 @@
 												<p4>This is a co-op project with UMMS, designed for people with CD(cognitive disability).</p4></br>
 												<p4>My work is mainly on the follwing parts:</br>
 												• Utlize "word to vector", compare the value of cosø to find synonyms candidates in our dictionary. I tried both NLTK WordNet and our own dictionary, which is generated from the original text.</br>
-												• 												 
+												• After find out candidates, I use different ranking method to get final result. For example, word "aaaaa" has the following candidates: "bbbb" (shortest length), "ccccc" (appeared in the orginal txt), "aabbaa" (highest ranking in dictionary).</br>
+												</br>Future work:</br>												
+												<div style="text-indent: 2em">The problems are it is hard to evaluate simplified text and what is the defination of 'simplier'	extactly. We tried manual rating, but it takes too much time and without large amount of experiments, the result is not convincible and can be subjective.
+											</p>
 											</div>
 										</article>
 										<article>
-											<span class="icon fa-comments-o"></span>
+											<span class="icon fa-comments-o"></span> <span class="icon fa-question-circle-o"></span> <span class="icon fa-reply-all"></span>
 											<div class="content">
 												<h3>Questioning and Answering System</h3>
-												<p4>Main language: Java </p4>
-												<p>This is a co-op research project with UMMS, IBM and WPI. Mainly purpose is to determine whether an article is friendly to people with CD. How do we measure that? We achieve this by calculating the correlation between "Rougue System rating" and manual rating. If the correlation is high, then we can use program instead of human, which is faster and more ojective.</p>
+												<p4>Main language: Java </p4></br>
+												<p4>This is a co-op project with UMMS, IBM and WPI and was designed to solve the "evaluation" problem in text simplification. The whole QA system is a big story and every organization is responsible for one part.</p4></br>
+												<p4>My work is mainly on the follwing parts:</br>
+												• Modify exsisting answering algorithm from online search to local search. Utlizing online resources can answer question well but they are not "simplified", which makes our evaluation void.
+												• The original algorithm generates one thousand questions over 25 articles and we use one summarized text article to answer these questions. I feed all the questions into topic detection model to filter "bad" questions. After that, the correlation between "Rougue System" and human rating increased form 0.6 to 0.75.</br>
+												</br>Future work:</br>												
+												<div style="text-indent: 2em">How to generate "good" questions is the main issue and our experiment need to be tested in practice.
+												<!--p>This is a co-op research project with UMMS, IBM and WPI. Mainly purpose is to determine whether an article is friendly to people with CD. How do we measure that? We achieve this by calculating the correlation between "Rougue System rating" and manual rating. If the correlation is high, then we can use program instead of human, which is faster and more ojective.</p-->
+											</p>
 											</div>
 										</article>
 										<article>
-											<span class="icon fa-bar-chart-o"></span>
+											<span class="icon fa-bar-chart-o"></span> <span class="icon fa-tags"></span> 
+											<span class="icon fa-institution"></span>
 											<div class="content">
 												<h3>Machine Learning Coursework</h3>
 												<p4>Main language: Python, C </p4>
 												<p>Main website: <a href="http://imanmk.github.io/MLKDD/">here</a> </br>
 													dropbox: <a href="https://www.dropbox.com/sh/qu9agmuvcevuynk/AADqs8-getvwxMsJEqSLj6ACa?dl=0">here</a> </br>
 													evaluation: <a href="http://www.cs.umb.edu/~ding/history/438_638_spring_2016/student.htm">here</a> </br>
-													I performed a feature engineering role. And my the biggest contribution to improve RMSE is introduced a new KNN variant. </br>
+													I performed a feature engineering role. And my the biggest contribution to improve RMSE is introduced a new KNN variant. The new algorithm treats the testing examples as their nearest neighbors as well,and then classfies them according to the maximun gain of intra-class coherence.</br>
 													One of the problems we met was that the dataset is large, nearly 1.2 million steps. Training, testing and validation take some amount of time. Our group had no access to server or cloud service like AWS, so our solution was multi-threading and cython. </br>
 													Another one is that we have to decide what methods we will combine into our blender. It is not about "coefficient_1 * method_1 + coefficient_2 * method_2..." and adjusting/testing coefficients to get a lowest RMSE, but why should we use this method and why should we use this coefficient. Are there any math or logic or realistic meaning behind it? In order to address this, our group read some 100 papers (some are directly from KDD, some are references) and then got final result.
 												</p>
