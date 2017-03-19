@@ -3485,6 +3485,7 @@
 		-ms-flex-shrink: 1;
 		flex-shrink: 1;
 		width: 100%;
+		position: relative;
 	}
 
 		#main > .inner {
@@ -3542,7 +3543,7 @@
 
 	#search form {
 		text-decoration: none;
-		position: fixed;
+		position: relative;
 	}
 
 		#search form:before {
@@ -3979,6 +3980,7 @@
 		margin-bottom: 0;
 		padding: 0;
 		text-transform: uppercase;
+		position: relative;
 	}
 
 		#menu ul a, #menu ul span {
@@ -4029,7 +4031,7 @@
 				}
 
 				#menu ul a.opener.active + ul, #menu ul span.opener.active + ul {
-					display: block;
+					display: inline-block;
 				}
 
 				#menu ul a.opener.active:before, #menu ul span.opener.active:before {
