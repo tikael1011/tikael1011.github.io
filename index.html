@@ -64,7 +64,7 @@
 												• Evacuation route algorithm design. Our current algorithm blocks all the hallways and rooms, which are directly connected to gunman's location and a cirle with center point of gunman's location and a radius of 20 meters.</br></br> Future work:</br> 
 												<div style="text-indent: 2em">• Better UI design, multi layouts and SSH connection instead of FTP.</br>
 												<div style="text-indent: 2em">• Introduce time series method, may be able to improve accuracy.</br>
-												<div style="text-indent: 2em">• Current time complexity is O(nˆ2), n is number of points that describe the floor map. Try to optimize to O(nlog(n)) and calculate multi routes simultaneously.
+												<div style="text-indent: 2em">• In worst case, A* has exponential space and time complexity. But if we are able to optimize heuristic, A* will be O(n) in both space and time complexity if we disregard the complexity of the heuristic calculation itself.
 											</p>
 											</div>
 										</article>
