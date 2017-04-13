@@ -1,5 +1,8 @@
 Jie's webiste
 
+Projects I have done or am doing. What I have learnt, what problems I met, further/future improvement?
+
+
 Template Powered by "Editorial by HTML5 UP"
 
 <!- Original Comments -->
