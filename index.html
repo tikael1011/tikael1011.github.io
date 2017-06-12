@@ -55,8 +55,8 @@
 											    One of the challenge I met is that the signal strength varies along time and other factors. The second is that utilizing signal strength alone is not enough to achieve high accuracy (error < 1m). The third is that while people using our app, they move fast. We should try to minimalize the delay both in communication between app and server and localization/route computation.</p-->
 											    <p4>My work is mainly on the follwing parts:</br>
 											    • Develop user app. This app is able to</p4>
-												<div style="text-indent: 2em">∆ start active scan AP, which helps Kismet detection and collect AP info 
-												</br><div style="text-indent: 2em">∆ establish FTP connection to server, send current AP info and receive evacuation route
+												<div style="text-indent: 2em">∆ start active scan, which helps Kismet detection and collect AP info 
+												</br><div style="text-indent: 2em">∆ establish SSH connection to server, send scan results and receive evacuation route
 												</br><div style="text-indent: 2em">∆ navigate user to exit based on preintalled map</br>
 												• Wifi signal strength based localization. There are many existing technologies/methods. But they either require extra hardware(e.g. Chrono MIT,2016) or can't meet our accuracy requirement(e.g. decision tree, SVM), or require relative long computation time. Thus a new model is required.
 												</br>
