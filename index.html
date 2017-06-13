@@ -32,8 +32,8 @@
 											<h1>
 											Jie's website</h1>
 										</header>
-										<p>I received my master's degree in Computer Science from Umass Boston.This website is mainly about
-											projects I have done or am doing. Construciton is undergoing.</p>
+										<p>I received my master's degree in Computer Science from UMass Boston.This website is mainly about
+											projects I have done or am doing. The "Tech Involved" part lists main programming language and tools in specific project. Construciton is undergoing.</p>
 									</div>
 								</section>
 
@@ -48,19 +48,18 @@
 											<span class="icon fa-paper-plane"></span>
 											<div class="content">
 												<h3>IndoorNav</h3>
-												<p4>Main language: Java, Python </p4> </br>
-											        <p4>video: <a href="https://youtu.be/OFcsOjZEalM" target="_blank">here</a> </p4></br>
-												<!--p>This research proejct simulates the following (similar) situation: A gunman shows up inside a building, and people start to evacuate. They open our app, then they know where they are and will receive evacuation routes based on their current location. There are four main parts of this project: wifi signal strength based localization, route planning, image processing and SDN (software defined network). </br>
-												My work is mainly on wifi part and I am responsible for integration of the whole program. </br>
-											    One of the challenge I met is that the signal strength varies along time and other factors. The second is that utilizing signal strength alone is not enough to achieve high accuracy (error < 1m). The third is that while people using our app, they move fast. We should try to minimalize the delay both in communication between app and server and localization/route computation.</p-->
-											    <p4>My work is mainly on the follwing parts:</br>
-											    • Develop user app. This app is able to</p4>
-												<div style="text-indent: 2em">∆ start active scan, which helps Kismet detection and collect AP info 
-												</br><div style="text-indent: 2em">∆ establish SSH connection to server, send scan results and receive evacuation route
-												</br><div style="text-indent: 2em">∆ navigate user to exit based on preintalled map</br>
-												• Wifi signal strength based localization. There are many existing technologies/methods. But they either require extra hardware(e.g. Chrono MIT,2016) or can't meet our accuracy requirement(e.g. decision tree, SVM), or require relative long computation time. Thus a new model is required.
+												<p4>Tech Involved: Java, Python, Weka, Android Studio, MATLAB.</p4> </br>
+												<p4>Modules/Package in Python: numpy, matplotlib, <a href="http://www.statsmodels.org/stable/index.html" target="_blank">statsmodels.</a> </p4> </br>
+											    <p4>Porject Video: <a href="https://youtu.be/OFcsOjZEalM" target="_blank">here.</a> Great thanks to my teammate SonNam Nguyen.</p4></br>
+												This research project simulates the following (similar) situation: A gunman shows up inside a building, and people start to evacuate. An individual can get route to the nearest safe exit based on his location, gunman's location/movement and flow control from our mobile application.</br>
+											    Key highlights in my work:</br>
+											    • Developed android applications and debugged problems such as crashes and concurrency. Our client application is able to:</br>
+												<div style="text-indent: 2em">∆ start active scan, which helps Kismet detection and collect AP info.
+												<div style="text-indent: 2em">∆ establish SSH connection (was FTP but for security reason we switched), upload scan results to server and download evacuation route from server.
+												<div style="text-indent: 2em">∆ navigate user to exit and update route during usage.</br>
+												• ♣	Implemented new algorithm for wi-fi signal strength based indoor localization. There are many existing technologies/methods. But they either require extra hardware(e.g. Chrono MIT,2016) or can't meet our accuracy requirement(e.g. decision tree), or require relative long computation time. Thus a new model is required.
 												</br>
-												• Combine image processing (Raspberry Pi + camera) to improve accuracy and reduce computation time, especially user is near an intersection. Through human recognition, we can also achieve flow control.</br>
+												• ♣	Devised evacuation route algorithm based on A* algorithm.</br>
 												• Evacuation route algorithm design. Our current algorithm blocks all the hallways and rooms, which are directly connected to gunman's location and a cirle with center point of gunman's location and a radius of 20 meters.</br></br> Future work:</br> 
 												<div style="text-indent: 2em">• Better UI design, multi layouts and SSH connection instead of FTP.</br>
 												<div style="text-indent: 2em">• Introduce time series method, may be able to improve accuracy.</br>
@@ -73,11 +72,11 @@
 											<span class="icon fa-pie-chart"</span>
 											<div class="content">
 												<h3>Text Sentiment Analysis</h3>
-												<p4>Main language: Python</p4></br>
+												<p4>Tech Involved: Python</p4></br>
 												<p4>Partial results can be seen at <p4><a href = "http://158.121.178.175/" target="_blank">here</a></br>
 												<!--p>The purpose of this project can be described as following: Something bad happend.(in our research, we use 2014 W.VA chemical spill as example) The governor needs to make a speech about it and he/she wants to receive positive feedback from the public, thus timing and content become very important. We research wants to help him/her to make that decision. </br>
 												One thing I struggled with is to deal with negation and sarcasm. The other thing is that in my opinion, traing dataset is not sufficient. Adding more dataset, e.g. 2010 BP oil spill may improve the result.</p-->
-												<p4>My work is mainly on the follwing parts:</br>
+												<p4>Key highlights in my work:</br>
 											    • Write Python crawler for twitter and nbc news, utlize 'requests' and 'beautifulsoup4' library.</br>
 											    • After extract time, location, user and other info from the original data via Stanford NER tools,(for tweet part I ruled out 'news' as well) I utilize NLTK POS-tagging and <a href="http://mpqa.cs.pitt.edu">sentiment vocabulary</a> to extract semantic meaning from the comments.</br>
 											    • Utlize D3.js to generate pie-chart based on K-means classification and utlize matplotlib to generate histogram.</br>
@@ -93,9 +92,9 @@
 											<span class="icon fa-file-o"></span>
 											<div class="content">
 												<h3>Text Simplification</h3>
-												<p4>Main language: Java, Python </p4></br>
+												<p4>Tech Involved: Java, Python </p4></br>
 												<p4>This is a co-op project with UMMS, designed for people with CD(cognitive disability).</p4></br>
-												<p4>My work is mainly on the follwing parts:</br>
+												<p4>Key highlights in my work:</br>
 												• Utlize "word to vector", compare the value of cosø to find synonyms candidates in our dictionary. I tried both NLTK WordNet and our own dictionary, which is generated from the original text.</br>
 												• After find out candidates, I use different ranking method to get final result. For example, word "aaaaa" has the following candidates: "bbbb" (shortest length), "ccccc" (appeared in the orginal txt), "aabbaa" (highest ranking in dictionary).</br>
 												</br>Future work:</br>												
@@ -107,14 +106,14 @@
 											<span class="icon fa-comments-o"></span> <span class="icon fa-question-circle-o"></span> <span class="icon fa-reply-all"></span>
 											<div class="content">
 												<h3>Questioning and Answering System</h3>
-												<p4>Main language: Java </p4></br>
+												<p4>Tech Involved: Java </p4></br>
 												<p4>This is a co-op project with UMMS, IBM and WPI and was designed to solve the "evaluation" problem in text simplification. The whole QA system is a big story and every organization is responsible for one part.</p4></br>
-												<p4>My work is mainly on the follwing parts:</br>
+												<p4>Key highlights in my work:</br>
 												• Modify exsisting answering algorithm from online search to local search. Utlizing online resources can answer question well but they are not "simplified", which makes our evaluation void. </br>
 												• The original algorithm generates one thousand questions over 25 articles and we use one summarized text article to answer these questions. I feed all the questions into topic detection model to filter "bad" questions. After that, the correlation between "Rougue System" and human rating increased form 0.6 to 0.75.</br>
 												</br>Future work:</br>												
 												<div style="text-indent: 2em">How to generate "good" questions is the main issue and our experiment need to be tested in practice.
-												//<!--p>This is a co-op research project with UMMS, IBM and WPI. Mainly purpose is to determine whether an article is friendly to people with CD. How do we measure that? We achieve this by calculating the correlation between "Rougue System rating" and manual rating. If the correlation is high, then we can use program instead of human, which is faster and more ojective.</p-->
+												<!--p>This is a co-op research project with UMMS, IBM and WPI. Mainly purpose is to determine whether an article is friendly to people with CD. How do we measure that? We achieve this by calculating the correlation between "Rougue System rating" and manual rating. If the correlation is high, then we can use program instead of human, which is faster and more ojective.</p-->
 											</p>
 											</div>
 										</article>
@@ -123,10 +122,10 @@
 											<span class="icon fa-institution"></span>
 											<div class="content">
 												<h3>Machine Learning Coursework</h3>
-												<p4>Main language: Python, C </p4>
-												<p>Main website: <a href="http://imanmk.github.io/MLKDD/" target="_blank">here</a> </br>
-													dropbox: <a href="https://www.dropbox.com/sh/qu9agmuvcevuynk/AADqs8-getvwxMsJEqSLj6ACa?dl=0" target="_blank">here</a> </br>
-													evaluation: <a href="http://www.cs.umb.edu/~ding/history/438_638_spring_2016/student.htm" target="_blank">here</a> </br>
+												<p4>Tech Involved: Python, C </p4>
+												<p>Main website: <a href="http://imanmk.github.io/MLKDD/" target="_blank">here.</a> </br>
+													dropbox: <a href="https://www.dropbox.com/sh/qu9agmuvcevuynk/AADqs8-getvwxMsJEqSLj6ACa?dl=0" target="_blank">here.</a> </br>
+													evaluation: <a href="http://www.cs.umb.edu/~ding/history/438_638_spring_2016/student.htm" target="_blank">here.</a> </br>
 													I performed a feature engineering role. And my the biggest contribution to improve RMSE is introduced a new KNN variant. The new algorithm treats the testing examples as their nearest neighbors as well,and then classfies them according to the maximun gain of intra-class coherence.</br>
 													One of the problems we met was that the dataset is large, nearly 1.2 million steps. Training, testing and validation take some amount of time. Our group had no access to server or cloud service like AWS, so our solution was multi-threading and cython. </br>
 													Another one is that we have to decide what methods we will combine into our blender. It is not about "coefficient_1 * method_1 + coefficient_2 * method_2..." and adjusting/testing coefficients to get a lowest RMSE, but why should we use this method and why should we use this coefficient. Are there any math or logic or realistic meaning behind it? In order to address this, our group read some 100 papers (some are directly from KDD, some are references) and then got final result.
