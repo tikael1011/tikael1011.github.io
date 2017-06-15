@@ -33,7 +33,7 @@
 											Jie's website</h1>
 										</header>
 										<p>I received my master's degree in Computer Science from UMass Boston.This website is mainly about
-											projects I have done or am doing. The "Tech Involved" part lists main programming language and tools in specific project. Construciton is undergoing.</p>
+											projects I have done or am doing. The "Tech Involved" part lists main programming language and tools in specific project. Hyperlink to same module will appear only once. Construciton is undergoing.</p>
 									</div>
 								</section>
 
@@ -49,18 +49,21 @@
 											<div class="content">
 												<h3>IndoorNav</h3>
 												<p4>Tech Involved: Java, Python, Weka, Android Studio, MATLAB.</p4> </br>
-												<p4>Modules/Package in Python: numpy, matplotlib, <a href="http://www.statsmodels.org/stable/index.html" target="_blank">statsmodels.</a> </p4> </br>
+												<p4>Modules/Package in Python: <a href="
+													https://www.scipy.org/" target="_blank">scipy, </a> <a href="http://www.numpy.org/" target="_blank">numpy, </a> <a href="https://matplotlib.org/" target="_blank">matplotlib, </a> <a href="http://www.statsmodels.org/stable/index.html" target="_blank">statsmodels.</a> </p4> </br>
 											    <p4>Porject Video: <a href="https://youtu.be/OFcsOjZEalM" target="_blank">here.</a> Great thanks to my teammate SonNam Nguyen.</p4></br>
 												This research project simulates the following (similar) situation: A gunman shows up inside a building, and people start to evacuate. An individual can get route to the nearest safe exit based on his location, gunman's location/movement and flow control from our mobile application.</br>
 											    Key highlights in my work:</br>
-											    • Developed android applications and debugged problems such as crashes and concurrency. Our client application is able to:</br>
+											    ♣	Developed android applications and debugged problems such as crashes and concurrency. Our client application is able to:</br>
 												<div style="text-indent: 2em">∆ start active scan, which helps Kismet detection and collect AP info.
 												<div style="text-indent: 2em">∆ establish SSH connection (was FTP but for security reason we switched), upload scan results to server and download evacuation route from server.
 												<div style="text-indent: 2em">∆ navigate user to exit and update route during usage.</br>
-												• ♣	Implemented new algorithm for wi-fi signal strength based indoor localization. There are many existing technologies/methods. But they either require extra hardware(e.g. Chrono MIT,2016) or can't meet our accuracy requirement(e.g. decision tree), or require relative long computation time. Thus a new model is required.
+												♣	Implemented new algorithm for wi-fi signal strength based indoor localization. There are many existing technologies/methods. But they either require extra hardware(e.g. Chrono MIT,2016) or can't meet our accuracy requirement(e.g. decision tree), or require relative long computation time. Thus a new model is required.
 												</br>
-												• ♣	Devised evacuation route algorithm based on A* algorithm.</br>
-												• Evacuation route algorithm design. Our current algorithm blocks all the hallways and rooms, which are directly connected to gunman's location and a cirle with center point of gunman's location and a radius of 20 meters.</br></br> Future work:</br> 
+												♣	Devised evacuation route algorithm based on A* algorithm.</br>
+												♣	Revised localization algorithm by utilizing image processing result.</br>
+												<!--Evacuation route algorithm design. Our current algorithm blocks all the hallways and rooms, which are directly connected to gunman's location and a cirle with center point of gunman's location and a radius of 20 meters.-->
+												</br> Future work:</br> 
 												<div style="text-indent: 2em">• Better UI design, multi layouts and SSH connection instead of FTP.</br>
 												<div style="text-indent: 2em">• Introduce time series method, may be able to improve accuracy.</br>
 												<div style="text-indent: 2em">• In worst case, A* has exponential space and time complexity. But if we are able to optimize heuristic, A* will be O(n) in both space and time complexity if we disregard the complexity of the heuristic calculation itself.
@@ -72,14 +75,19 @@
 											<span class="icon fa-pie-chart"</span>
 											<div class="content">
 												<h3>Text Sentiment Analysis</h3>
-												<p4>Tech Involved: Python</p4></br>
-												<p4>Partial results can be seen at <p4><a href = "http://158.121.178.175/" target="_blank">here</a></br>
+												<p4>Tech Involved: Python, Standford NER, </a> <a href="http://mpqa.cs.pitt.edu" target="_blank">sentiment vocabulary, </a><a href="http://www.netlingo.com/" target="_blank">netlingo dictionary.</a></p4></br>
+												<p4>Modules/Package in Python: matplotlib, <a href="http://www.nltk.org/" target="_blank">NLTK, </a> <a href="http://docs.python-requests.org/en/master/" target="_blank">requests, </a> <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">b4soup, </a> <a href="https://pypi.python.org/pypi/autocorrect/" target="_blank">autocorrect.</a></p4> </br>
+												<p4>Partial results can be seen at <p4><a href = "http://158.121.178.175/" target="_blank">here.</a></br>
 												<!--p>The purpose of this project can be described as following: Something bad happend.(in our research, we use 2014 W.VA chemical spill as example) The governor needs to make a speech about it and he/she wants to receive positive feedback from the public, thus timing and content become very important. We research wants to help him/her to make that decision. </br>
-												One thing I struggled with is to deal with negation and sarcasm. The other thing is that in my opinion, traing dataset is not sufficient. Adding more dataset, e.g. 2010 BP oil spill may improve the result.</p-->
+												One thing I struggled with is to deal with negation and sarcasm. The other thing is that in my opinion, traing dataset is not sufficient. Adding more dataset, e.g. 2010 BP oil spill may improve the result.
+											Extracted data regarding sentiment of certain topic from social media and analyzed the public options forward events with machine learning algorithm. </p-->
 												<p4>Key highlights in my work:</br>
-											    • Write Python crawler for twitter and nbc news, utlize 'requests' and 'beautifulsoup4' library.</br>
-											    • After extract time, location, user and other info from the original data via Stanford NER tools,(for tweet part I ruled out 'news' as well) I utilize NLTK POS-tagging and <a href="http://mpqa.cs.pitt.edu">sentiment vocabulary</a> to extract semantic meaning from the comments.</br>
-											    • Utlize D3.js to generate pie-chart based on K-means classification and utlize matplotlib to generate histogram.</br>
+											    ♣	Wrote crawlers to collect data with twitter API and Python modules.</br>
+											    ♣	Processed thousands of pages’ information within 3 minutes with regular expression matching.</br>
+											    ♣	Implemented rule-based semantic classification with Stanford NER and NLTK POS-tagging.</br>
+											    ♣	Developed data visualization tool from D3.js frame and matplotlib module.</br>
+											    <!--• After extract time, location, user and other info from the original data via Stanford NER tools,(for tweet part I ruled out 'news' as well) I utilize NLTK POS-tagging and  to extract semantic meaning from the comments.</br>
+											    • Utlize D3.js to generate pie-chart based on K-means classification and utlize matplotlib to generate histogram.-->
 												</br>Future work:</br>												
 												<div style="text-indent: 2em">• Set up database for crawlers rather than store all the data in a local txt file.
 												<div style="text-indent: 2em">• Utilize machine learning rather than rule-based methond to deal with negation and sarcasm.
@@ -95,8 +103,11 @@
 												<p4>Tech Involved: Java, Python </p4></br>
 												<p4>This is a co-op project with UMMS, designed for people with CD(cognitive disability).</p4></br>
 												<p4>Key highlights in my work:</br>
-												• Utlize "word to vector", compare the value of cosø to find synonyms candidates in our dictionary. I tried both NLTK WordNet and our own dictionary, which is generated from the original text.</br>
-												• After find out candidates, I use different ranking method to get final result. For example, word "aaaaa" has the following candidates: "bbbb" (shortest length), "ccccc" (appeared in the orginal txt), "aabbaa" (highest ranking in dictionary).</br>
+												<!--• Utlize "word to vector", compare the value of cosø to find synonyms candidates in our dictionary. I tried both NLTK WordNet and our own dictionary, which is generated from the original text.</br>
+												• After find out candidates, I use different ranking method to get final result. For example, word "aaaaa" has the following candidates: "bbbb" (shortest length), "ccccc" (appeared in the orginal txt), "aabbaa" (highest ranking in dictionary).</br-->
+												♣	Utilized word2vec and implemented other algorithms to find synonymic word candidates. </br>
+												♣	Analyzed results based on NLTK WordNet and own dictionary, which was generated from original text. </br>
+
 												</br>Future work:</br>												
 												<div style="text-indent: 2em">The problems are it is hard to evaluate simplified text and what is the defination of 'simplier'	extactly. We tried manual rating, but it takes too much time and without large amount of experiments, the result is not convincible and can be subjective.
 											</p>
@@ -109,8 +120,10 @@
 												<p4>Tech Involved: Java </p4></br>
 												<p4>This is a co-op project with UMMS, IBM and WPI and was designed to solve the "evaluation" problem in text simplification. The whole QA system is a big story and every organization is responsible for one part.</p4></br>
 												<p4>Key highlights in my work:</br>
-												• Modify exsisting answering algorithm from online search to local search. Utlizing online resources can answer question well but they are not "simplified", which makes our evaluation void. </br>
-												• The original algorithm generates one thousand questions over 25 articles and we use one summarized text article to answer these questions. I feed all the questions into topic detection model to filter "bad" questions. After that, the correlation between "Rougue System" and human rating increased form 0.6 to 0.75.</br>
+												♣	Revised answering search algorithm and changed resource from online to local.</br>
+												♣	Utilized topic detection to reduce the number of questions, which significantly improved result.</br>
+												<!--• Modify exsisting answering algorithm from online search to local search. Utlizing online resources can answer question well but they are not "simplified", which makes our evaluation void.> </br>
+												• The original algorithm generates one thousand questions over 25 articles and we use one summarized text article to answer these questions. I feed all the questions into topic detection model to filter "bad" questions. After that, the correlation between "Rougue System" and human rating increased form 0.6 to 0.75.</br-->
 												</br>Future work:</br>												
 												<div style="text-indent: 2em">How to generate "good" questions is the main issue and our experiment need to be tested in practice.
 												<!--p>This is a co-op research project with UMMS, IBM and WPI. Mainly purpose is to determine whether an article is friendly to people with CD. How do we measure that? We achieve this by calculating the correlation between "Rougue System rating" and manual rating. If the correlation is high, then we can use program instead of human, which is faster and more ojective.</p-->
@@ -122,7 +135,8 @@
 											<span class="icon fa-institution"></span>
 											<div class="content">
 												<h3>Machine Learning Coursework</h3>
-												<p4>Tech Involved: Python, C </p4>
+												<p4>Tech Involved: Python, C, <a href="http://cython.org/" target="_blank">Cython.</a></p4></br>
+												<p4>Modules/Package in Python: scipy, numpy, <a href="http://pandas.pydata.org/" target="_blank">pandas, </a> <a href="http://scikit-learn.org/stable/" target="_blank">scikit-learn</a> </p4>
 												<p>Main website: <a href="http://imanmk.github.io/MLKDD/" target="_blank">here.</a> </br>
 													dropbox: <a href="https://www.dropbox.com/sh/qu9agmuvcevuynk/AADqs8-getvwxMsJEqSLj6ACa?dl=0" target="_blank">here.</a> </br>
 													evaluation: <a href="http://www.cs.umb.edu/~ding/history/438_638_spring_2016/student.htm" target="_blank">here.</a> </br>
@@ -160,7 +174,7 @@
 											<span class="opener">Projects</span>
 											<ul>
 												<li><a href="#indoornav" id = "indoornav-link" class="skel-layers-ignoreHref">IndoorNav</a></li>
-												<li><a href="#textsa" id = "textsa-link"class="skel-layers-ignoreHref">Text Semantic Recognition</a></li>
+												<li><a href="#textsa" id = "textsa-link"class="skel-layers-ignoreHref">Text Sentiment Analysis</a></li>
 												<li><a href="#textsp" id = "textsp-link"class="skel-layers-ignoreHref">Text Simplification</a></li>
 												<li><a href="#qa" id = "qa-link"class="skel-layers-ignoreHref">QA system</a></li>
 												<li><a href="#ml" id = "ml-link"class="skel-layers-ignoreHref">ML Coursework</a></li>
