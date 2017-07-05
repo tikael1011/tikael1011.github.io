@@ -33,7 +33,7 @@
 											Jie's website</h1>
 										</header>
 										<p>I received my master's degree in Computer Science from UMass Boston (GPA 3.7/4.0). I am looking for a full-time software engineer or data analyst/scientist position. There is no conflict between these two roles and IMHO, the relation is like an individual can play basketball as well as soccer, has similarities and also differences. This website is mainly about
-											projects I have done or am doing and I will try cover both angle. The "Tech Involved" part lists main programming language and tools in specific project. Hyperlink to same library will appear only once. Construciton is undergoing.</p>
+											projects I have done or am doing and I will try cover both angle. The "Tech Involved" part lists main programming language and tools in specific project. Hyperlink to same library (mainly in Python) will appear only once. Construciton is undergoing.</p>
 									</div>
 								</section>
 
@@ -57,43 +57,18 @@
 											    ♣	Developed android applications and debugged problems such as crashes and concurrency. Our client application is able to:</br>
 												<div style="text-indent: 2em">∆ start active scan, which helps Kismet detection and collect AP info.
 												<div style="text-indent: 2em">∆ establish SSH connection (was FTP but for security reason we switched), upload scan results to server and download evacuation route from server.
-												<div style="text-indent: 2em">∆ navigate user to exit and update route during usage.</br>
+												<div style="text-indent: 2em">∆ navigate user to exit by showing the latest route.</br>
 												♣	Implemented new algorithm for wi-fi signal strength based indoor localization. There are many existing technologies/methods. But they either require extra hardware(e.g. Chrono MIT,2016) or can't meet our accuracy requirement(e.g. decision tree), or require relative long computation time. Thus a new model is required.
 												</br>
-												♣	Devised evacuation route algorithm based on A* algorithm.</br>
-												♣	Revised localization algorithm by utilizing image processing result. I utilized the detection to eliminate non-occupied location candidates, reduce computation time and improve accuracy in open area and crossroads.</br>
+												♣	Devised A* based evacuation route algorithm and reduced computation time significantly. As is known to all that A* has O(b<sup>d</sup>) runtime complexcity and O(b<sup>d</sup>) space complexcity in worst case. I dynamically changed the heuristics and setup a "stop searching" threshold, which avoids unnecessary computation. </br>
+												♣	Improved localization accuracy at hallway intersections by utilizing image processing. I utilized the detection to eliminate non-occupied location candidates, reduce computation time .</br>
 												<!--Evacuation route algorithm design. Our current algorithm blocks all the hallways and rooms, which are directly connected to gunman's location and a cirle with center point of gunman's location and a radius of 20 meters.-->
 												</br> Future work:</br> 
-												<div style="text-indent: 2em">• Better UI design, multi layouts and SSH connection instead of FTP.</br>
+												<div style="text-indent: 2em">• Better UI design, multi layouts.</br>
 												<div style="text-indent: 2em">• Introduce time series method, may be able to improve accuracy.</br>
-												<div style="text-indent: 2em">• In worst case, A* has exponential space and time complexity, which means if route is relative long then the computation time will become unacceptable. But if we are able to dynamically change the expanding threshold, than we can avoid unnecessary computation.
+												
 											</p>
 											</div>
-										</article>
-										<article id = "textsa">
-											<span class="icon fa-file-text"</span> <span class="icon fa-files-o"</span>
-											<span class="icon fa-pie-chart"</span>
-											<div class="content">
-												<h3>Text Sentiment Analysis</h3>
-												<p4>Tech Involved: Python, Standford NER, </a> <a href="http://mpqa.cs.pitt.edu" target="_blank">sentiment vocabulary, </a><a href="http://www.netlingo.com/" target="_blank">netlingo dictionary,</a> jQuery, D3js.</p4></br>
-												<p4>libraries/Package in Python: matplotlib, <a href="http://www.nltk.org/" target="_blank">NLTK, </a> <a href="http://docs.python-requests.org/en/master/" target="_blank">requests, </a> <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">b4soup, </a> <a href="https://pypi.python.org/pypi/autocorrect/" target="_blank">autocorrect.</a></p4> </br>
-												<p4>Partial results can be seen at: <p4><a href = "http://158.121.178.175/" target="_blank">here.</a></br>
-												<!--p>The purpose of this project can be described as following: Something bad happend.(in our research, we use 2014 W.VA chemical spill as example) The governor needs to make a speech about it and he/she wants to receive positive feedback from the public, thus timing and content become very important. We research wants to help him/her to make that decision. </br>
-												One thing I struggled with is to deal with negation and sarcasm. The other thing is that in my opinion, traing dataset is not sufficient. Adding more dataset, e.g. 2010 BP oil spill may improve the result.
-											Extracted data regarding sentiment of certain topic from social media and analyzed the public options forward events with machine learning algorithm. </p-->
-												<p4>Key highlights in my work:</br>
-											    ♣	Wrote crawlers to collect data with twitter API and Python libraries.</br>
-											    ♣	Processed thousands of pages’ information within 3 minutes with regular expression matching.</br>
-											    ♣	Implemented rule-based semantic classification with Stanford NER and NLTK POS-tagging.</br>
-											    ♣	Developed data visualization tool from D3.js frame and matplotlib library.</br>
-											    <!--• After extract time, location, user and other info from the original data via Stanford NER tools,(for tweet part I ruled out 'news' as well) I utilize NLTK POS-tagging and  to extract semantic meaning from the comments.</br>
-											    • Utlize D3.js to generate pie-chart based on K-means classification and utlize matplotlib to generate histogram.-->
-												</br>Future work:</br>												
-												<div style="text-indent: 2em">• Set up database for crawlers rather than store all the data in a local txt file.
-												<div style="text-indent: 2em">• Utilize machine learning rather than rule-based methond to deal with negation and sarcasm.
-												<div style="text-indent: 2em">• The original research only collects data from 2014 W.VA Chemical Spill and I want to collect data from other event e.g. 2010 BP Spill.
-											</p>
-											</div>										
 										</article>
 										<article id = "textsp">
 											<span class="icon fa-wheelchair"</span> <span class="icon fa-file-text-o"</span>
@@ -119,9 +94,10 @@
 												<h3>Questioning and Answering System</h3>
 												<p4>Tech Involved: Java </p4></br>
 												<p4>This is a co-op project with UMMS, IBM and WPI and was designed to solve the "evaluation" problem in text simplification. The whole QA system is a big story and each organization is responsible for one part.</p4></br>
+												Paper has not been accepted yet, but it is on <a href="http://arxiv.org" target="_blank">arxiv.org </a>already. If you are interested, just email me. </br>
 												<p4>Key highlights in my work:</br>
 												♣	Revised answering search algorithm and changed resource from online to local.</br>
-												♣	Utilized topic detection to reduce the number of questions, which significantly improved result.</br>
+												♣	♣	Utilized LDA topic model to reduce the number of questions, which significantly improved result.</br>
 												<!--• Modify exsisting answering algorithm from online search to local search. Utlizing online resources can answer question well but they are not "simplified", which makes our evaluation void.> </br>
 												• The original algorithm generates one thousand questions over 25 articles and we use one summarized text article to answer these questions. I feed all the questions into topic detection model to filter "bad" questions. After that, the correlation between "Rougue System" and human rating increased form 0.6 to 0.75.</br-->
 												</br>Future work:</br>												
@@ -129,6 +105,32 @@
 												<!--p>This is a co-op research project with UMMS, IBM and WPI. Mainly purpose is to determine whether an article is friendly to people with CD. How do we measure that? We achieve this by calculating the correlation between "Rougue System rating" and manual rating. If the correlation is high, then we can use program instead of human, which is faster and more ojective.</p-->
 											</p>
 											</div>
+										</article>
+										<article id = "textsa">
+											<span class="icon fa-file-text"</span> <span class="icon fa-files-o"</span>
+											<span class="icon fa-pie-chart"</span>
+											<div class="content">
+												<h3>Text Sentiment Analysis</h3>
+												<p4>Tech Involved: Python, Standford NER, </a> <a href="http://mpqa.cs.pitt.edu" target="_blank">sentiment vocabulary, </a><a href="http://www.netlingo.com/" target="_blank">netlingo dictionary,</a> jQuery, D3js.</p4></br>
+												<p4>libraries/Package in Python: matplotlib, <a href="http://www.nltk.org/" target="_blank">NLTK, </a> <a href="http://docs.python-requests.org/en/master/" target="_blank">requests, </a> <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">b4soup, </a> <a href="https://pypi.python.org/pypi/autocorrect/" target="_blank">autocorrect.</a></p4> </br>
+												<p4>Partial results can be seen at: <p4><a href = "http://158.121.178.175/" target="_blank">here.</a></br>
+													Paper has not been published yet but if you are interested, just email me. </br>
+												<!--p>The purpose of this project can be described as following: Something bad happend.(in our research, we use 2014 W.VA chemical spill as example) The governor needs to make a speech about it and he/she wants to receive positive feedback from the public, thus timing and content become very important. We research wants to help him/her to make that decision. </br>
+												One thing I struggled with is to deal with negation and sarcasm. The other thing is that in my opinion, traing dataset is not sufficient. Adding more dataset, e.g. 2010 BP oil spill may improve the result.
+											Extracted data regarding sentiment of certain topic from social media and analyzed the public options forward events with machine learning algorithm. </p-->
+												<p4>Key highlights in my work:</br>
+											    ♣	Wrote crawlers to collect data with twitter API and Python libraries.</br>
+											    ♣	Processed thousands of pages’ information within 3 minutes with regular expression matching.</br>
+											    ♣	Implemented rule-based semantic classification with Stanford NER and NLTK POS-tagging.</br>
+											    ♣	Developed data visualization tool from D3.js frame and matplotlib library.</br>
+											    <!--• After extract time, location, user and other info from the original data via Stanford NER tools,(for tweet part I ruled out 'news' as well) I utilize NLTK POS-tagging and  to extract semantic meaning from the comments.</br>
+											    • Utlize D3.js to generate pie-chart based on K-means classification and utlize matplotlib to generate histogram.-->
+												</br>Future work:</br>												
+												<div style="text-indent: 2em">• Set up database for crawlers rather than store all the data in a local txt file.
+												<div style="text-indent: 2em">• Utilize machine learning rather than rule-based methond to deal with negation and sarcasm.
+												<div style="text-indent: 2em">• The original research only collects data from 2014 W.VA Chemical Spill and I want to collect data from other event e.g. 2010 BP Spill.
+											</p>
+											</div>										
 										</article>
 										<article id = "ml">
 											<span class="icon fa-bar-chart-o"></span> <span class="icon fa-tags"></span> 
@@ -144,6 +146,7 @@
 													♣	Wrote scripts to filter noisy data, which reduced the size of dataset by roughly 15%.</br>
 													♣	Revised random selection algorithm, which reduced computation time from 8h to 12min. </br>
 													♣	Constructed new KNN variant algorithm, achieved RMSE<0.34. </br>
+													♣	Built team project website and maintained version control on github. </br>
 
 													<p4></p4></br>
 													<!--I performed a feature engineering role. And my the biggest contribution to improve RMSE is introduced a new KNN variant. The new algorithm treats the testing examples as their nearest neighbors as well,and then classfies them according to the maximun gain of intra-class coherence.</br>
@@ -180,9 +183,9 @@
 											<span class="opener">Projects</span>
 											<ul>
 												<li><a href="#indoornav" id = "indoornav-link" class="skel-layers-ignoreHref">IndoorNav</a></li>
-												<li><a href="#textsa" id = "textsa-link"class="skel-layers-ignoreHref">Text Sentiment Analysis</a></li>
 												<li><a href="#textsp" id = "textsp-link"class="skel-layers-ignoreHref">Text Simplification</a></li>
 												<li><a href="#qa" id = "qa-link"class="skel-layers-ignoreHref">QA system</a></li>
+												<li><a href="#textsa" id = "textsa-link"class="skel-layers-ignoreHref">Text Sentiment Analysis</a></li>
 												<li><a href="#ml" id = "ml-link"class="skel-layers-ignoreHref">ML Coursework</a></li>
 											</ul>
 										</li>
