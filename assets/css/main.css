@@ -3980,8 +3980,11 @@
 		list-style: none;
 		margin-bottom: 0;
 		padding: 0;
-		text-transform: uppercase;
+		text-transform: none !important;
 		position: relative;
+	}
+		ul:first-letter {
+		text-transform: capitalize;
 	}
 
 		#menu ul a, #menu ul span {
