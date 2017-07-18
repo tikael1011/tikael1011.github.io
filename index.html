@@ -32,7 +32,9 @@
 											<h1>
 											Jie's website</h1>
 										</header>
-										<p>I received my master's degree in Computer Science from UMass Boston (GPA 3.7/4.0). I am looking for a full-time software engineer or data analyst/scientist position. There is no conflict between these two roles and IMHO, the relation is like an individual can play basketball as well as soccer, has similarities and also differences and they may facilitate each other. This website is mainly about projects I have done or am doing and I will try cover both angle. The "Tech Involved" part lists main programming language and tools in specific project. Hyperlinks will direct you to external sources in new page. Construciton is undergoing.</p>
+										<p>I received my master's degree in Computer Science from UMass Boston (GPA 3.7/4.0). I am looking for a full-time software engineer or data analyst/scientist position. There is no conflict between these two roles and IMHO, the relation is like an individual can play basketball as well as soccer, has similarities and also differences and they may facilitate each other. This website is mainly about projects I have done or am doing and I will try to cover both angles. The "Tech Involved" part lists main programming language and tools in specific project. Hyperlinks will direct you to external sources in new page.
+										</br></br>Each Neural Network project will be presented individually and they are written in either C or Python. Hyperlinks to external paper/sources/tools, such as tensorflow, will NOT be provided, because there are too many of them. 
+										</br></br>Construciton is undergoing.</p>
 									</div>
 								</section>
 
@@ -190,9 +192,24 @@
 												<li><a href="#ml" id = "ml-link"class="skel-layers-ignoreHref">ML Coursework</a></li>
 											</ul>
 										</li>
-										<a href="swe.html">Software Engineering</a>
-										<a href="ds.html">Data Science</a>
-										<a href="extra.html">Neural Network Models</a>
+										<ul>									
+											<div class="tooltip"> <a href="swe.html">Software Engineering</a>
+											  <span class="tooltipswe">Click Me!</span>
+											</div>
+										</ul>
+										<ul>									
+											<div class="tooltip"> <a href="ds.html">Data Science</a>
+											  <span class="tooltipds">Click Me As Well!</span>
+											</div>
+										</ul>
+										<li>
+											<span class="opener">Neural Network Projects</span>
+											<ul>
+												<li>Dota 2 Match</li>
+												<li>Soccer Match</li>
+												<li>Stop Sign Recognition</li>
+											</ul>
+										</li>
 									</ul>
 								</nav>
 										
@@ -250,7 +267,78 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/tooltip.js"></script>
 			
 
 	</body>
+	<style>
+		.tooltip {
+		    position: relative;
+		    display: inline-block;
+		}
+
+		.tooltip .tooltipswe {
+		    visibility: hidden;
+		    width: 100px;
+		    background-color:#f56a6a;
+		    text-decoration: red;
+		    text-align: center;
+		    border-radius: 6px;
+		    padding: 5px 0;
+		    position: absolute;
+		    top:-5px;
+		    left: 150%;
+		    margin-left: -60px;
+		    opacity: 0;
+		    transition: opacity 1s;
+		}
+
+		.tooltip .tooltipswe::after {
+		    content: "";
+		    position: absolute;
+		    top: 50%;
+		    right: 100%;
+		    margin-top: -5px;
+		    border-width: 5px;
+		    border-style: solid;
+		    border-color: transparent #f56a6a transparent transparent;
+		}
+
+		.tooltip:hover .tooltipswe {
+		    visibility: visible;
+		    opacity: 1;
+		}
+
+		.tooltip .tooltipds {
+		    visibility: hidden;
+		    width: 140px;
+		    background-color:#f56a6a;
+		    text-decoration: red;
+		    text-align: center;
+		    border-radius: 6px;
+		    padding: 5px 0;
+		    position: absolute;
+		    top:-5px;
+		    left: 200%;
+		    margin-left: -60px;
+		    opacity: 0;
+		    transition: opacity 1s;
+		}
+
+		.tooltip .tooltipds::after {
+		    content: "";
+		    position: absolute;
+		    top: 50%;
+		    right: 100%;
+		    margin-top: -5px;
+		    border-width: 5px;
+		    border-style: solid;
+		    border-color: transparent #f56a6a transparent transparent;
+		}
+
+		.tooltip:hover .tooltipds {
+		    visibility: visible;
+		    opacity: 1;
+		}
+		</style>
 </html>
