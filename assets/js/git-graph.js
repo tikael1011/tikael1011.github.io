@@ -16,10 +16,8 @@ module.exports = function GitHubCalendar (container, username, options) {
 
     container = $(container);
 
-
     options = options || {};
-    options.summary_text = options.summary_text || `Summary of pull requests, issues opened, and <b>Public</b> commits made by <a href="https://github.com/${username}" target="blank">@${username}</a>`;
-
+    options.summary_text = options.summary_text || `Summary of pull requests, issues opened, and commits made by <a href="https://github.com/${username}" target="blank">@${username}</a>`;
 
     if (options.global_stats === false) {
         container.style.minHeight = "175px";
@@ -43,12 +41,10 @@ module.exports = function GitHubCalendar (container, username, options) {
         if (cal.querySelector("include-fragment")) {
             setTimeout(fetchCalendar, 500);
         } 
-        else {
+        /*else {
             if (options.global_stats !== false) {
                 let parsed = parse($("svg", cal).outerHTML)
-                ,
-                ;
-                /*  , currentStreakInfo = parsed.current_streak
+                  , currentStreakInfo = parsed.current_streak
                                       ? `${formatoid(parsed.current_streak_range[0], DATE_FORMAT2)} – ${formatoid(parsed.current_streak_range[1], DATE_FORMAT2)}`
                                       : parsed.last_contributed
                                       ? `Last contributed in ${formatoid(parsed.last_contributed, DATE_FORMAT2)}.`
@@ -79,14 +75,14 @@ module.exports = function GitHubCalendar (container, username, options) {
                   ;
 
                 cal.appendChild(firstCol);
+                /*
                 cal.appendChild(secondCol);
                 cal.appendChild(thirdCol);
-            */
+                
             }
-
+*/
             container.innerHTML = cal.innerHTML;
-        }
-    }.catch(e => console.error(e));
+    }).catch(e => console.error(e));
 
     return fetchCalendar();
 }
