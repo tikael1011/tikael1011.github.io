@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jie's website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>
+											Jie's website</h1>
+										</header>
+										<p>I received my master's degree in Computer Science from UMass Boston (GPA 3.7/4.0). I am looking for a full-time software engineer or data analyst/scientist position. There is no conflict between these two roles and IMHO, the relation is like an individual can play basketball as well as soccer, has similarities and also differences and they may facilitate each other. This website is mainly about projects I have done or am doing and I will try to cover both angles. The "Tech Involved" part lists main programming language and tools in specific project. Hyperlinks will direct you to external sources in new page.
+										</br></br>Each Neural Network project will be presented individually and they are written in either C or Python3. Hyperlinks to external paper/sources/tools, such as tensorflow, will NOT be provided, because there are too many of them. For the C code, I use gcc, (and 'make' of course) some 'undefined' or compiler-prefered code (I will try to avoid) may not perfrom properly. 
+										</br></br>Construciton is ALWAYS undergoing.
+										</br> I am planning to change the theme, and after that, my homepage will become 'see me as a software enginneer' or 'see me in
+										data science'</p>
+									</div>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Projects</h2>
+									</header>
+									<!--div class="features"-->
+										<article id="indoornav">
+											<span class="icon fa-wifi"></span> <span class="icon fa-map"></span> 
+											<span class="icon fa-paper-plane"></span>
+											<div class="content">
+												<h3>IndoorNav</h3>
+												<p4>Tech Involved: Java, Python, <a href="http://www.cs.waikato.ac.nz/ml/weka/" target="_blank">Weka, </a>Android Studio, MATLAB.</p4> </br>
+												<p4>libraries/Package in Python: <a href="
+													https://www.scipy.org/" target="_blank">scipy, </a> <a href="http://www.numpy.org/" target="_blank">numpy, </a> <a href="https://matplotlib.org/" target="_blank">matplotlib, </a> <a href="http://www.statsmodels.org/stable/index.html" target="_blank">statsmodels.</a> </p4> </br>
+											    <p4>Porject Video: <a href="https://youtu.be/OFcsOjZEalM" target="_blank">here.</a> Great thanks to my teammate SonNam Nguyen.</p4></br>
+												This research project simulates the following (similar) situation: A gunman shows up inside a building, and people start to evacuate. An individual can get route to the nearest safe exit based on his location, gunman's location/movement and flow control from our mobile application.</br>
+											    Key highlights in my work:</br>
+											    ♣	Developed android applications and debugged problems such as crashes and concurrency. Our client application is able to:</br>
+												<div style="text-indent: 2em">∆ start active scan, which helps Kismet detection and collect AP info.
+												<div style="text-indent: 2em">∆ establish SSH connection (was FTP but for security reason we switched), upload scan results to server and download evacuation route from server.
+												<div style="text-indent: 2em">∆ navigate user to exit by showing the latest route.</br>
+												♣	Implemented new algorithm for wi-fi signal strength based indoor localization. There are many existing technologies/methods. But they either require extra hardware(e.g. Chrono MIT,2016) or can't meet our accuracy requirement(e.g. decision tree), or require relative long computation time. Thus a new model is required.
+												</br>
+												♣	Devised A* based evacuation route algorithm and reduced computation time significantly. As is known to all that A* has O(b<sup>d</sup>) runtime complexcity and O(b<sup>d</sup>) space complexcity in worst case. I dynamically changed the heuristics and setup a "stop searching" threshold, which avoids unnecessary computation. </br>
+												♣	Improved localization accuracy at hallway intersections by utilizing image processing results. I utilized the detection to eliminate non-occupied location candidates, reduce computation time. </br>
+												<!--Evacuation route algorithm design. Our current algorithm blocks all the hallways and rooms, which are directly connected to gunman's location and a cirle with center point of gunman's location and a radius of 20 meters.-->
+												</br>Evlucation:</br>
+												In my opnion, this is most valuable part of this project. Because I learned a lot from this process.
+												</br> Future work:</br> 
+												<div style="text-indent: 2em">• Better UI design, multi layouts.</br>
+												<div style="text-indent: 2em">• Introduce time series method, may be able to improve accuracy.</br>
+												<div style="text-indent: 2em">• Image processing can also be used to achieve flow control, which might be able to evacuate people even faster.</br>
+											</p>
+											</div>
+										</article>
+										<article id = "textsp">
+											<span class="icon fa-wheelchair"</span> <span class="icon fa-file-text-o"</span>
+											<span class="icon fa-file-o"></span>
+											<div class="content">
+												<h3>Text Simplification</h3>
+												<p4>Tech Involved: Java, Python </p4></br>
+												<p4>libraries/Package in Python: <a href="http://www.nltk.org/" target="_blank">NLTK </a></br>
+												<p4>This is a co-op project with UMMS, designed for people with CD(cognitive disability). We want to replace complicate lexical words with simple synonyms while keep the gist. And so far our work is word level. 'Simplify' is different from 'summarize'. In short, summaried text is not necessarily simple.</p4></br>
+												<p4>Key highlights in my work:</br>
+												♣	Utilized word2vec and then implemented other algorithms to find synonymic word candidates. The two main algorithms I implentmented were comparing cosø value and comparing euclidean distance.</br>
+												♣	After find out candidates, I used different ranking method to get final result. For example, word "aaaaa" has the following candidates: "bbbb" (shortest length), "ccccc" (appeared in the orginal txt), "aabbaa" (highest ranking in dictionary, I tried both NLTK <a href="https://wordnet.princeton.edu/" target="_blank">WordNet</a> and own dictionary, which was generated from original text).</br>
+
+												</br>Future work:</br>												
+												<div style="text-indent: 2em">It is hard to evaluate and what is the extact defination of 'simplier'. We tried manual rating, but it takes too much time and without large amount of experiments, the result is not convincible and can be subjective.
+											</p>
+											</div>
+										</article>
+										<article id = "qa">
+											<span class="icon fa-comments-o"></span> <span class="icon fa-question-circle-o"></span> <span class="icon fa-reply-all"></span>
+											<div class="content">
+												<h3>Questioning and Answering System</h3>
+												<p4>Tech Involved: Java </p4></br>
+												<p4>This is a co-op project with UMMS, IBM and WPI and was designed to solve the "evaluation" problem in text simplification. The whole QA system is a big story and each organization is responsible for one part.</p4></br>
+												Paper has not been accepted yet, but it is on <a href="http://arxiv.org" target="_blank">arxiv.org </a>already. Email me if interested. </br>
+												<p4>Key highlights in my work:</br>
+												♣	Revised answering search algorithm and changed resource from online to local.</br>
+												♣	Utilized LDA topic model to reduce the number of questions, which significantly improved result.</br>
+												<!--• Modify exsisting answering algorithm from online search to local search. Utlizing online resources can answer question well but they are not "simplified", which makes our evaluation void.> </br>
+												• The original algorithm generates one thousand questions over 25 articles and we use one summarized text article to answer these questions. I feed all the questions into topic detection model to filter "bad" questions. After that, the correlation between "Rougue System" and human rating increased form 0.6 to 0.75.</br-->
+
+												</br>Future work:</br>												
+												<div style="text-indent: 2em">How to generate "good" questions is the main issue and our experiment need to be tested in practice.
+												<!--p>This is a co-op research project with UMMS, IBM and WPI. Mainly purpose is to determine whether an article is friendly to people with CD. How do we measure that? We achieve this by calculating the correlation between "Rougue System rating" and manual rating. If the correlation is high, then we can use program instead of human, which is faster and more ojective.</p-->
+											</p>
+											</div>
+										</article>
+										<article id = "textsa">
+											<span class="icon fa-file-text"</span> <span class="icon fa-files-o"</span>
+											<span class="icon fa-pie-chart"</span>
+											<div class="content">
+												<h3>Text Sentiment Analysis</h3>
+												<p4>Tech Involved: Python, Standford NER, </a> <a href="http://mpqa.cs.pitt.edu" target="_blank">sentiment vocabulary, </a><a href="http://www.netlingo.com/" target="_blank">netlingo dictionary,</a> jQuery, D3js.</p4></br>
+												<p4>libraries/Package in Python: matplotlib, NLTK, <a href="http://docs.python-requests.org/en/master/" target="_blank">requests, </a> <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">b4soup, </a> <a href="https://pypi.python.org/pypi/autocorrect/" target="_blank">autocorrect.</a></p4> </br>
+												<p4>Partial results can be seen at: <p4><a href = "http://158.121.178.175/" target="_blank">here.</a></br>
+													Paper has not been published yet but if you are interested, just email me. </br>
+												<!--p>The purpose of this project can be described as following: Something bad happend.(in our research, we use 2014 W.VA chemical spill as example) The governor needs to make a speech about it and he/she wants to receive positive feedback from the public, thus timing and content become very important. We research wants to help him/her to make that decision. </br>
+												One thing I struggled with is to deal with negation and sarcasm. The other thing is that in my opinion, traing dataset is not sufficient. Adding more dataset, e.g. 2010 BP oil spill may improve the result.
+											Extracted data regarding sentiment of certain topic from social media and analyzed the public options forward events with machine learning algorithm. </p-->
+												<p4>Key highlights in my work:</br>
+											    ♣	Wrote crawlers to collect data with twitter API and Python libraries.</br>
+											    ♣	Processed thousands of pages’ information within 3 minutes with regular expression matching.</br>
+											    ♣	Implemented rule-based semantic classification with Stanford NER and NLTK POS-tagging.</br>
+											    ♣	Developed data visualization tool from D3.js frame and matplotlib library.</br>
+											    <!--• After extract time, location, user and other info from the original data via Stanford NER tools,(for tweet part I ruled out 'news' as well) I utilize NLTK POS-tagging and  to extract semantic meaning from the comments.</br>
+											    • Utlize D3.js to generate pie-chart based on K-means classification and utlize matplotlib to generate histogram.-->
+												</br>Future work:</br>												
+												<div style="text-indent: 2em">• Set up database for crawlers rather than store all the data in a local txt file.
+												<div style="text-indent: 2em">• Utilize machine learning rather than rule-based methond to deal with negation and sarcasm.
+												<div style="text-indent: 2em">• The original research only collects data from 2014 W.VA Chemical Spill and I want to collect data from other event e.g. 2010 BP Spill.
+											</p>
+											</div>										
+										</article>
+										<article id = "ml">
+											<span class="icon fa-bar-chart-o"></span> <span class="icon fa-tags"></span> 
+											<span class="icon fa-institution"></span>
+											<div class="content">
+												<h3>Machine Learning Coursework</h3>
+												<p4>Tech Involved: Python, C, <a href="http://cython.org/" target="_blank">Cython, </a> jQuery.</p4></br>
+												<p4>libraries/Package in Python: scipy, numpy, <a href="http://pandas.pydata.org/" target="_blank">pandas, </a> <a href="http://scikit-learn.org/stable/" target="_blank">scikit-learn.</a> </p4>
+												<p>Main website: <a href="http://imanmk.github.io/MLKDD/" target="_blank">here.</a> </br>
+													dropbox: <a href="https://www.dropbox.com/sh/qu9agmuvcevuynk/AADqs8-getvwxMsJEqSLj6ACa?dl=0" target="_blank">here.</a> </br>
+													evaluation: <a href="http://www.cs.umb.edu/~ding/history/438_638_spring_2016/student.htm" target="_blank">here.</a> </br>
+													I performed feature engineering role, implemented algorithm to improve final RMSE. Key highlights:</br>
+													♣	Wrote scripts to filter noisy data, which reduced the size of dataset by roughly 15%.</br>
+													♣	Revised random selection algorithm, which reduced computation time from 8h to 12min. </br>
+													♣	Constructed new KNN variant algorithm, achieved RMSE<0.34. </br>
+													♣	Built team project website and maintained version control on github. </br>
+
+													<p4></p4></br>
+													<!--I performed a feature engineering role. And my the biggest contribution to improve RMSE is introduced a new KNN variant. The new algorithm treats the testing examples as their nearest neighbors as well,and then classfies them according to the maximun gain of intra-class coherence.</br>
+													One of the problems we met was that the dataset is large, nearly 1.2 million steps. Training, testing and validation take some amount of time. Our group had no access to server or cloud service like AWS, so our solution was multi-threading and cython. </br>
+													Another one is that we have to decide what methods we will combine into our blender. It is not about "coefficient_1 * method_1 + coefficient_2 * method_2..." and adjusting/testing coefficients to get a lowest RMSE, but why should we use this method and why should we use this coefficient. Are there any math or logic or realistic meaning behind it? In order to address this, our group read some 100 papers (some are directly from KDD, some are references) and then got final result. -->
+												</p>
+											</div>
+										</article>
+									<!--/div-->
+								</section>
+								<script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
+								<link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"/>
+								<div class="calendar"> </div>
+								<script>
+								    GitHubCalendar(".calendar", "tikael1011");
+								</script>
+							
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search >
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Content</h2>
+									</header>
+									<ul>
+										<li>
+											<span class="opener">Projects</span>
+											<ul>
+												<li><a href="#indoornav" id = "indoornav-link" class="skel-layers-ignoreHref">IndoorNav</a></li>
+												<li><a href="#textsp" id = "textsp-link"class="skel-layers-ignoreHref">Text Simplification</a></li>
+												<li><a href="#qa" id = "qa-link"class="skel-layers-ignoreHref">QA system</a></li>
+												<li><a href="#textsa" id = "textsa-link"class="skel-layers-ignoreHref">Text Sentiment Analysis</a></li>
+												<li><a href="#ml" id = "ml-link"class="skel-layers-ignoreHref">ML Coursework</a></li>
+											</ul>
+										</li>
+										<!--ul>									
+											<div class="tooltip"> <a href="swe.html" target="_blank">Software Engineering</a>
+											  <span class="tooltipswe">Under Construction!</span>
+											</div>
+										</ul>
+										<ul>									
+											<div class="tooltip"> <a href="ds.html" target="_blank">Data Science</a>
+											  <span class="tooltipds">Under Construction As Well!</span>
+											</div>
+										</ul-->
+										<li>
+											<div class="tooltip"
+												<span class="opener">Neural Network Projects</span>
+												<span class="tooltipswe">Under Construction!</span>
+											</div>
+											<ul>
+												<li><a href="dota2match.html">Dota 2 Match</a></li>
+												<li>Soccer Match</li>
+												<li><a href="stopsignrec.html">Stop Sign Recognition</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+										
+										<!--li><a href="trivia.html">Trivia</a></li-->										
+									
+
+
+							<!-- Section >
+								<section>
+									<header class="major">
+										<h2>Ante interdum</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<!--header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p-->
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="#">jqian170@gmail.com</a></li>
+										<li class="fa-home">Boston, MA</li>
+									</ul>
+								</section>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Jie. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/tooltip.js"></script>
+			<script src="assets/js/require.js"></script>
+			
+
+			
+
+	</body>
+	<style>
+		.tooltip {
+		    position: relative;
+		    display: inline-block;
+		}
+
+		.tooltip .tooltipswe {
+		    visibility: hidden;
+		    width: 100px;
+		    background-color:#f56a6a;
+		    text-decoration: red;
+		    text-align: center;
+		    border-radius: 6px;
+		    padding: 5px 0;
+		    position: absolute;
+		    top:-5px;
+		    left: 150%;
+		    margin-left: -60px;
+		    opacity: 0;
+		    transition: opacity 1s;
+		}
+
+		.tooltip .tooltipswe::after {
+		    content: "";
+		    position: absolute;
+		    top: 50%;
+		    right: 100%;
+		    margin-top: -5px;
+		    border-width: 5px;
+		    border-style: solid;
+		    border-color: transparent #f56a6a transparent transparent;
+		}
+
+		.tooltip:hover .tooltipswe {
+		    visibility: visible;
+		    opacity: 1;
+		}
+
+		.tooltip .tooltipds {
+		    visibility: hidden;
+		    width: 140px;
+		    background-color:#f56a6a;
+		    text-decoration: red;
+		    text-align: center;
+		    border-radius: 6px;
+		    padding: 5px 0;
+		    position: absolute;
+		    top:-5px;
+		    left: 200%;
+		    margin-left: -60px;
+		    opacity: 0;
+		    transition: opacity 1s;
+		}
+
+		.tooltip .tooltipds::after {
+		    content: "";
+		    position: absolute;
+		    top: 50%;
+		    right: 100%;
+		    margin-top: -5px;
+		    border-width: 5px;
+		    border-style: solid;
+		    border-color: transparent #f56a6a transparent transparent;
+		}
+
+		.tooltip:hover .tooltipds {
+		    visibility: visible;
+		    opacity: 1;
+		}
+		</style>
+</html>
