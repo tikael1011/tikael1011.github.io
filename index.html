@@ -27,7 +27,7 @@
 							<div class="inner">
 								<h1>Jie's Website</h1>
 								<p>Dear visitors, I suppose you have had my resume and want to see more details. If you haven't, shoot me an email at <a href="#">jqian170@gmail.com</a></br>
-							For old version of my website, please check <a href="oldversion/index.html" target="_blank">here</a>. I have decided to use a new theme on 9/6/2017.
+							For old version of my website, please check <a href="oldversion/index.html" target="_blank">here</a>. I have decided to use a new theme on 9/6/2017, I mean re-build the whole thing, honestly.
 							</br>
 							You might want to visit either "Software Engineering" or "Data Science". Construction of "Other Projects" is always undergoing, 
 							</br>because there are numerous new ones upcoming.
@@ -55,11 +55,20 @@
 								<p>IMHO, engineering is more about 'how' and 'what'. This does not mean questions like 'why this data structure', 'what are the cons and pros of this' does not matter. To the contrary, they are important as well. My opinion can be wrong but literally that is what I pay attention/adhere to. Problem solving skill is the <b>KEY</b>.</p>
 								<h4>Indoor Nav Project </h4>
 									<p>
-										 1. I guess you have questions about the database, at least why it is ONLY in 1NF?
-									</br>2. Did I use proxy? Any load balance? distibuted server?
-									</br>3. How extactly is the concurrency problem and how you solve it?
-									</br>4. Any trade-off for the computation time reduction? and in detail, how?
-									</br>5. What model? Why UML?
+										 <i>➤ why the database was ONLY in 1NF? and what was the schema?</i>
+									</br>A: There are reasons why people need 1NF, 2NF, 3NF or even BCNF.
+									</br>
+									</br><i>➤Did you use proxy? Any load balance? distibuted server?</i>
+									</br>A: No. Our app connected to server directly and we only had one server.
+									</br>
+									</br><i>➤ How extactly is the concurrency problem and how you solve it?</i>
+									</br>A: Actually there were two problems. One was when user moves to a new location, the route does not update accordingly. The other one was originally, our app did not keep being connected to server and sent connect request too often, thus after few seconds the firewall mechanism blocked our requests.
+									</br>
+									</br><i>➤  Any trade-off for the computation time reduction? and in detail, how?</i>
+									</br>A: I applied threee tricks.
+									</br>
+									</br><i>➤  What UML model?</i>
+									</br>A: Functional and object model.
 									</p>
 								<h4>Simplfication and QA Project</h4>
 									<p>
@@ -71,6 +80,11 @@
 										 1. More details about the crawler? How did you utilize the API and tweepy? Format, database, server load...
 									</p>
 								<h4>KDD Cup Project</h4>
+									<p>
+										 1. How did you filter data? what rule did you apply and any trade-off? And why you want to perform filtering?
+									</br>2. How did you maintain version control? How do you understand the scm/version control? Is it important and why?
+									</br>A: Our team had four numbers and only two person were contridutors. The others had to make pull requests and sometimes we merged and sometimes we created a new branch/fork.
+									</p>
 								<h4>Complier Project</h4>
 							</article>
 
@@ -94,7 +108,7 @@
 						<!-- abt&log -->
 							<article id="lg">
 								<h2 class="major">About</h2>
-								<p>The contents in software engineering and data science are somehow limited, because they were done during my master's study and it is not very likely I will further improve them.</p>
+								<p>The contents in software engineering and data science are somehow limited, because they were done during my master's study and it is not very likely I will further improve them. I did learn a lot from being a research assistant.</p>
 								<h2 class="major">Log</h2>
 								<p>9/7/2017, v0.01 online, very basic.</p>
 								<p></p>
