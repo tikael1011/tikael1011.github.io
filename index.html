@@ -52,19 +52,19 @@
 							<article id="swe">
 								<h2 class="major">Software Engingeering</h2>
 								<h3>Preface:</h3>
-								<p>IMHO, engineering is more about 'how' and 'what'. This does not mean questions like 'why this data structure', 'what are the cons and pros of this' does not matter. To the contrary, they are important as well. My opinion can be wrong but literally that is what I pay attention/adhere to. Problem solving skill is the <b>KEY</b>.</p>
+								<p>IMHO, engineering is more about 'how' and 'what'. This does not mean questions like 'why this data structure', 'what are the cons and pros of this' does not matter. To the contrary, they are important as well. My opinion can be wrong but literally that is what I pay attention/adhere to. Problem solving skills are the <b>KEY</b>.</p>
 								<h4>Indoor Nav Project </h4>
 									<p>
 										 <i>➤ why the database was ONLY in 1NF? and what was the schema?</i>
-									</br>A: There are reasons why people need 1NF, 2NF, 3NF or even BCNF.
+									</br>A: There are reasons why people need 1NF, 2NF, 3NF or even BCNF. Like <b>minimize</b> duplicates, simplify queries. But my usage is pretty simple and I do not even need primary key (no indexing required as well). My table (relational database) has 38238 rows and 3 columns. The schema is 'Point Name' (varchar(6)), 'AP Name'(char(17)), Strength(tinyint). For the 'Strength' part, data type was float(24) (not 53) and our localization algorithm shows that there is barely an accuracy difference between int/float input, so I switched to tinyint.
 									</br>
 									</br><i>➤Did you use proxy? Any load balance? distibuted server?</i>
-									</br>A: No. Our app connected to server directly and we only had one server.
+									</br>A: No. Our app connected to server directly and we only had one server, I did not participate in server/network part much in our team.<b>However</b>, in terms of load balance, I thought of two strategies, the 'simplest' round-robin one and the 'lease connection' one. 
 									</br>
 									</br><i>➤ How extactly is the concurrency problem and how you solve it?</i>
-									</br>A: Actually there were two problems. One was when user moves to a new location, the route does not update accordingly. The other one was originally, our app did not keep being connected to server and sent connect request too often, thus after few seconds the firewall mechanism blocked our requests.
+									</br>A: It was that when user moves to a new location, the route does not update accordingly. The other one was originally, our app did not keep being connected to server and sent connect request too often, thus after few seconds the firewall mechanism blocked our requests.
 									</br>
-									</br><i>➤  Any trade-off for the computation time reduction? and in detail, how?</i>
+									</br><i>➤ Any trade-off for the computation time reduction? and in detail, how?</i>
 									</br>A: I applied threee tricks.
 									</br>
 									</br><i>➤  What UML model?</i>
