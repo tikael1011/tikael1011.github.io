@@ -68,7 +68,7 @@
 									</br>A: I applied three tricks. Second one is to examine the exit that has the shortest straight line distance to the user’s location regardless obstacles and restricted areas. This optimization is based on the observation that in most cases, such an exit is still the actual closest exit after considering obstacles and restricted areas. Last one, and the most important one, I set up a relatively low threshold of max steps and dynamically decreasing it during the calculation of a shortest path. Upon over 1000 random test cases on the original algorithm, 90% the shortest steps is within 1000 steps.
 									<img src="images/step_used.PNG" alt="step_used"></br>
 									I also dynamically changed the max steps in next iteration to be 3×actual_used_steps in the current iteration if it is smaller than max steps. This is based on the assumption that a path with smaller cost usually takes less steps to find.
-									<img src="images/seconds_used.PNG"></br>
+									<img src="images/seconds_used.PNG" width='549' height = '515'></br>
 									</br>
 									</br><i>➤  What UML model?</i>
 									</br>A: Functional and object model.
