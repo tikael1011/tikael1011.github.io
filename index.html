@@ -65,7 +65,9 @@
 									</br>A: It was that when user moves to a new location, the route does not update accordingly. The other one was originally, our app did not keep being connected to server and sent connect request too often, thus after few seconds the firewall mechanism blocked our requests.
 									</br>
 									</br><i>➤ Any trade-off for the computation time reduction? and in detail, how?</i>
-									</br>A: I applied threee tricks.
+									</br>A: I applied threee tricks. Second one is to examine the exit that has the shortest straight line distance to the user’s location regardless obstacles and restricted areas. This optimization is based on the observation that in most cases, such an exit is still the actual closest exit after considering obstacles and restricted areas. Last one, and the most important one, I set up a relatively low threshold of max steps and dynamically decreasing it during the calculation of a shortest path. Upon over 1000 random test cases on the original algorithm, 90% the shortest steps is within 1000 steps.
+									<img src="images/step_used.PNG" alt="step_used"></br>
+									I also dynamically changed the max steps in next iteration to be 3×actual_used_steps in the current iteration if it is smaller than max steps. This is based on the assumption that a path with smaller cost usually takes less steps to find
 									</br>
 									</br><i>➤  What UML model?</i>
 									</br>A: Functional and object model.
@@ -86,7 +88,7 @@
 									</br>2. How did you maintain version control? How do you understand the scm/version control? Is it important and why?
 									</br>A: Our team had four numbers and only two person were contridutors. The others had to make pull requests and sometimes we merged and sometimes we created a new branch/fork.
 									</p>
-								<h4>Complier Project</h4>
+								<h4>Compiler Project</h4>
 							</article>
 
 						<!-- ds -->
@@ -112,13 +114,13 @@
 								<h4>BattleShip Game AI (in both Haskell and Python)</h4>
 								<h4>Quora Challenges</h4>
 								<h4>OpenNMT Related Project (github)</h4>
-								<p>This one is based on a <a href="https://arxiv.org/pdf/1707.02499.pdf">paper(IJCAI 2017)</a>. And github link is <a href="https://github.com/tikael1011/storyreader-py">here</a></p>
+								<p>This one is based on one <a href="https://arxiv.org/pdf/1707.02499.pdf">paper(IJCAI 2017)</a>. And github link is <a href="https://github.com/tikael1011/storyreader-py">here</a></p>
 							</article>
 
 						<!-- abt&log -->
 							<article id="lg">
 								<h2 class="major">About</h2>
-								<p>The contents in software engineering and data science are somehow limited, because they were done during my master's study and it is not very likely I will further improve them. I did learn a lot from being a research assistant.</p>
+								<p>The contents in software engineering and data science are somehow limited, even though I might further improve them through new technology. I did learn a lot from being a research assistant.</p>
 								<h2 class="major">Log</h2>
 								<p>9/7/2017, v0.01 online, very basic.</p>
 								<p></p>
