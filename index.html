@@ -56,7 +56,7 @@
 								<h4>Indoor Nav Project </h4>
 									<p>
 										 <i>➤ why the database was ONLY in 1NF? and what was the schema?</i>
-									</br>A: There are reasons why people need 1NF, 2NF, 3NF or even BCNF. Like <b>minimize</b> duplicates, simplify queries. But my usage is pretty simple and I do not even need primary key (no indexing required as well). My table (relational database) has 38238 rows and 3 columns. The schema is 'Point Name' (varchar(6)), 'AP Name'(char(17)), Strength(tinyint). For the 'Strength' part, data type was float(24) (not 53) and our localization algorithm shows that there is barely an accuracy difference between int/float input, so I switched to tinyint.
+									</br>A: There are reasons why people need 1NF, 2NF, 3NF or even BCNF. Like <b>minimize</b> duplicates, simplify queries. But my usage is pretty simple and I do not even need primary key (no indexing required as well). My table (relational database) has 38238 rows and 3 columns. The schema is 'Point Name' (varchar(6)), 'AP Name'(char(17)), Strength(tinyint). For the 'Strength' part, data type was float(24) (not 53) and our localization algorithm shows that there is barely an accuracy difference between int/float input, so I switched to tinyint. And I decide we do not need NoSQL characteristic such as partition or schema-free.
 									</br>
 									</br><i>➤Did you use proxy? Any load balance? distibuted server?</i>
 									</br>A: No. Our app connected to server directly and we only had one server, I did not participate in server/network part much in our team.<b>However</b>, in terms of load balance, I thought of two strategies, the 'simplest' round-robin one and the 'lease connection' one. 
@@ -78,8 +78,9 @@
 									<p>
 										 1. Some usage questions about python argparse.
 									</br>2. Why did you rewrite the retrieval part? Add more functionlity? Performance improvement?
-									</br> This is designed for people with CD, and we do not know if we will have connection to internet or not and we want to get local results only. The main reason I mentioned this I want to demonstrate the experience in Linux/bash, grep, awk and so forth.
-									</br>3. Why after LDA model, the results was improved?</p>
+									</br>A: This is designed for people with CD, and we do not know if we have connection to internet or not and we want to get local results only (previous knowledge). The main reason I mentioned this is that I want to demonstrate the experience in Linux/bash, grep, awk and so forth.
+									</br>3. Why after LDA model, the results was improved?
+									</br>A: LDA can find out topic words. And once we filter questions without topic words (a.k.a bad questions), our answering system is able to more question correctly, thereby improves the results.</p>
 								<h4>Sentiment Analysis Project</h4>
 									<p>
 										 1. More details about the crawler? How did you utilize the API and tweepy? Format, database, server load...
@@ -88,7 +89,7 @@
 									<p>
 										 1. How did you filter data? what rule did you apply and any trade-off? And why you want to perform filtering?
 									</br>2. How did you maintain version control? How do you understand the scm/version control? Is it important and why?
-									</br>A: Our team had four numbers and only two person were contridutors. The others had to make pull requests and sometimes we merged and sometimes we created a new branch/fork.
+									</br>A: Our team had four numbers and till building website phase, only two person were contridutors. The others had to make pull requests and sometimes we merged and sometimes we created a new branch/fork.
 									</p>
 								<h4>Compiler Project</h4>
 							</article>
@@ -100,6 +101,10 @@
 								<p>IMHO, science is more about 'why' and what is behind the scene/data/results, e.g. mathematics. And sometimes we can get insights during the evaluation phase rather than the modeling/analysing phase. Analytic skill is the <b>KEY</b>.</p>
 								<h4>Simplfication Project</h4>
 								<h4>QA Project</h4>
+									<p>
+										1. Usage of LDA? What exactly did you do?
+									</br>A: I tried different stop words dictionary and different å,ß setting to filter questions without topic words. There is one question remain: How can we define 'bad' questions, or if our answering part failed to answer question conrrectly, should we improve the question generating part or the answering part.
+									</p>
 								<h4>Sentiment Analysis Project</h4>
 								<h4>KDD Cup Project</h4>
 							</article>
@@ -126,7 +131,7 @@
 								<p>The contents in software engineering and data science are somehow limited, even though I might further improve them through new technology. I did learn a lot from being a research assistant. Some extra for them:</br>
 									<b>Indoor Nav Project: </b><a href="https://youtu.be/OFcsOjZEalM" target="_blank">Video.</a></br>
 									<b>Text Sentiment: </b><a href = "http://158.121.178.175/" target="_blank">Partial visualization. </a>Paper hasn't been accepted yet but if you are interested in it, I can send you the draft.</br>
-									<b>Text simplify and QA system: </b>Again paper hasn't been accepted yet, but it is already on arxiv.org.
+									<b>Text simplify and QA system: </b>Again paper hasn't been accepted yet, but it is already on arxiv.org.</br>
 									<b>KDD CUP: </b><a href="http://imanmk.github.io/MLKDD/" target="_blank">Main website. </a><a href="http://www.cs.umb.edu/~ding/history/438_638_spring_2016/student.htm" target="_blank">Evaluation. </a>
 									</p>
 								<h2 class="major">Log</h2>
