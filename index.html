@@ -70,25 +70,26 @@
 									I also dynamically changed the max steps in next iteration to be 3×actual_used_steps in the current iteration if it is smaller than max steps. This is based on the assumption that a path with smaller cost usually takes less steps to find.
 									<img src="images/seconds_used.PNG" width='549' height = 'auto'></br>
 									</br>
-									</br><i>➤  What UML model?</i>
+									</br><i>➤  What UML model? and design pattern in your project?</i>
 									</br>A: Functional and object model.</br>
 									
 									</p>
 								<h4>Simplfication and QA Project</h4>
 									<p>
-										 1. Some usage questions about python argparse.
-									</br>2. Why did you rewrite the retrieval part? Add more functionlity? Performance improvement?
+										 <i>➤ 1. Python argparse usage?</i>
+									</br><i>➤2. Why did you rewrite the retrieval part? Add more functionlity? Performance improvement?</i>
 									</br>A: This is designed for people with CD, and we do not know if we have connection to internet or not and we want to get local results only (previous knowledge). The main reason I mentioned this is that I want to demonstrate the experience in Linux/bash, grep, awk and so forth.
-									</br>3. Why after LDA model, the results was improved?
+									</br><i>➤3. Why after LDA model, the results was improved?</i>
 									</br>A: LDA can find out topic words. And once we filter questions without topic words (a.k.a bad questions), our answering system is able to more question correctly, thereby improves the results.</p>
 								<h4>Sentiment Analysis Project</h4>
 									<p>
-										 1. More details about the crawler? How did you utilize the API and tweepy? Format, database, server load...
+										 <i>➤ 1. More details about the crawler? How did you utilize the API and tweepy? </i>
 									</p>
 								<h4>KDD Cup Project</h4>
 									<p>
-										 1. How did you filter data? what rule did you apply and any trade-off? And why you want to perform filtering?
-									</br>2. How did you maintain version control? How do you understand the scm/version control? Is it important and why?
+										<i>➤ 1. How did you filter data? what rule did you apply and any trade-off? And why you want to perform filtering?</i>
+									</br>A: The dataset is large, over 1M steps. The main reason is we want to get better performance during training and testing. And based on observation, we know there are a lot of outlayers or, sparse ones. We can't simply use normally distribution. Filtering data may affect our model, but we have no idea how it could be and we did do comparison. There is hardly a trade-off. More details please check data science part.
+									</br><i>➤2. How did you maintain version control? How do you understand the scm/version control? Is it important and why? </i>
 									</br>A: Our team had four numbers and till building website phase, only two person were contridutors. The others had to make pull requests and sometimes we merged and sometimes we created a new branch/fork.
 									</p>
 								<h4>Compiler Project</h4>
