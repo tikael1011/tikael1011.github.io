@@ -4,7 +4,8 @@ About my project experiences both during study and post-graduate, (sorry, so far
 
 Things to do(checklist):
 
-- [ ] List all the potential questions in both se and ds part.
+- [X] Share some details in SE part.
+- [ ] Share some details in DS part.
 - [ ] Answer to the questions above
 - [ ] More details about **_other projects_**
 - [ ] BattleShip AI

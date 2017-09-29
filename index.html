@@ -76,14 +76,30 @@
 									</p>
 								<h4>Simplfication and QA Project</h4>
 									<p>
-										 <i>➤ 1. Python argparse usage?</i>
-									</br><i>➤2. Why did you rewrite the retrieval part? Add more functionlity? Performance improvement?</i>
+										<i>➤1. Why did you rewrite the retrieval part? Add more functionlity? Performance improvement?</i>
 									</br>A: This is designed for people with CD, and we do not know if we have connection to internet or not and we want to get local results only (previous knowledge). The main reason I mentioned this is that I want to demonstrate the experience in Linux/bash, grep, awk and so forth.
-									</br><i>➤3. Why after LDA model, the results was improved?</i>
+									</br><i>➤2. Why after LDA model, the results was improved?</i>
 									</br>A: LDA can find out topic words. And once we filter questions without topic words (a.k.a bad questions), our answering system is able to more question correctly, thereby improves the results.</p>
 								<h4>Sentiment Analysis Project</h4>
 									<p>
-										 <i>➤ 1. More details about the crawler? How did you utilize the API and tweepy? </i>
+										 <i>➤ 1. More details about RX, example? </i>
+									</br>A: I did not use grep/egrap, but Python3 instead. Example pseudo code
+									</br><pre><code>
+import re
+
+for line in open("xxx.html"):
+	entity_pattern = re.compile(r'entitypattern')
+	nextuser_pattern = re.compiler(r'separatorpattern')
+	entity_match = entity_pattern.search(line)
+	nextuser_match = nextuser_pattern.search(line)
+	if entity_match:
+		entity_pattern_detail = re.search( r'start(.*)end', line, re.M|re.I)
+		if entity_pattern_detail:
+			entity = entity_pattern_detail.group(1)
+	if nextuser_match:
+		res = entity
+		print(res)
+									</code></pre>
 									</p>
 								<h4>KDD Cup Project</h4>
 									<p>
@@ -92,7 +108,6 @@
 									</br><i>➤2. How did you maintain version control? How do you understand the scm/version control? Is it important and why? </i>
 									</br>A: Our team had four numbers and till building website phase, only two person were contridutors. The others had to make pull requests and sometimes we merged and sometimes we created a new branch/fork.
 									</p>
-								<h4>Compiler Project</h4>
 							</article>
 
 						<!-- ds -->
@@ -137,6 +152,7 @@
 									</p>
 								<h2 class="major">Log</h2>
 								<p>9/7/2017, v0.01 online, very basic.</p>
+								<p>9/29/2017, added SE.</p>
 								<p></p>
 							</article>
 
