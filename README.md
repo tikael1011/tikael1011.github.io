@@ -5,11 +5,12 @@ About my project experiences both during study and post-graduate, (sorry, so far
 Things to do(checklist):
 
 - [X] Share some details in SE part.
-- [ ] Share some details in DS part.
-- [ ] Answer to the questions above
+~~- [ ] Share some details in DS part.~~
+~~- [ ] Answer to the questions above~~
+- [ ] delete DS part and rework SE part
 - [ ] More details about **_other projects_**
 - [ ] BattleShip AI
 - [ ] Quora Challenges
-- [ ] Code snippet/playground functionality
+~~- [ ] Code snippet/playground functionality~~
 - [ ] Learning specific topics
 ...
