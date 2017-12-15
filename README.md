@@ -10,12 +10,12 @@ Things to do(checklist):
 
 ~~- [ ] Answer to the questions above~~
 
-- [ ] delete DS part and rework SE part
-- [ ] More details about **_other projects_**
+- [X] delete DS part and rework SE part
+~~- [ ] More details about **_other projects_**~~
 - [ ] BattleShip AI
 - [ ] Quora Challenges
 
 ~~- [ ] Code snippet/playground functionality~~
 
-- [ ] Learning specific topics
+- [X] Learning specific topics
 ...
