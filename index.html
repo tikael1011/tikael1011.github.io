@@ -26,16 +26,24 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Jie's Website</h1>
+<<<<<<< Updated upstream
 								<p>Dear visitors, </br>
 							Site under re-built, <b>ALL<b> old data will be deleted.
 							</br>
 							</p>
+=======
+								<p>Dear visitors, I suppose you have had my resume and want to see more details. If you haven't, shoot me an email at <a href="#">jqian170@gmail.com</a></br>
+							For old version of my website, please check <a href="oldversion/index.html" target="_blank">here</a>. 
+							</br>
+							Graduate Study part contains details about projects during my master's study, while Post Graduate contains everything else.
+							</br> </p>
+>>>>>>> Stashed changes
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#swe">Software Engineering</a></li>
-								<li><a href="#ds">Data Science</a></li>
+								<li><a href="#gs">Graduate Study</a></li>
+								<li><a href="#pg">Post Graduate</a></li>
 								<li><a href="#other">Other Projects</a></li>
 								<li><a href="#lg">ABOUT & LOG</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
@@ -46,8 +54,8 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- swe -->
-							<article id="swe">
+						<!-- gs -->
+							<article id="gs">
 								<h2 class="major">Software Engingeering</h2>
 								<h3>Preface:</h3>
 								<p>IMHO, engineering is more about 'how' and 'what'. This does not mean questions like 'why this data structure', 'what are the cons and pros of this' does not matter. To the contrary, they are important as well. My opinion can be wrong but literally that is what I pay attention/adhere to. Problem solving skills are the <b>KEY</b>.</p>
@@ -60,13 +68,13 @@
 									</br>A: No. Our app connected to server directly and we only had one server, I did not participate in server/network part much in our team.<b>However</b>, in terms of load balance, I thought of two strategies, the 'simplest' round-robin one and the 'lease connection' one. 
 									</br>
 									</br><i>➤ How extactly is the concurrency problem and how you solve it?</i>
-									</br>A: It was that when user moves to a new location, the route does not update accordingly. The other one was originally, our app did not keep being connected to server and sent connect request too often, thus after few seconds the firewall mechanism blocked our requests.
+									</br>A: It was that when user moves to a new location, the route does not update accordingly. The other one was originally, our app did not keep being connected to server and sent connect request too often, thus after few seconpg the firewall mechanism blocked our requests.
 									</br>
 									</br><i>➤ Any trade-off for the computation time reduction? and in detail, how?</i>
 									</br>A: I applied three tricks. First, exits that are located in dangerous areas before requesting the actual optimal path. Second one is to examine the exit that has the shortest straight line distance to the user’s location regardless obstacles and restricted areas. This optimization is based on the observation that in most cases, such an exit is still the actual closest exit after considering obstacles and restricted areas. Last one, and the most important one, I set up a relatively low threshold of max steps and dynamically decreasing it during the calculation of a shortest path. Upon over 1000 random test cases on the original algorithm, 90% the shortest steps is within 1000 steps.
 									<img src="images/step_used.PNG" alt="step_used"></br>
 									I also dynamically changed the max steps in next iteration to be 3×actual_used_steps in the current iteration if it is smaller than max steps. This is based on the assumption that a path with smaller cost usually takes less steps to find.
-									<img src="images/seconds_used.PNG" width='549' height = 'auto'></br>
+									<img src="images/seconpg_used.PNG" width='549' height = 'auto'></br>
 									</br>
 									</br><i>➤  What UML model? and design pattern in your project?</i>
 									</br>A: Functional and object model.</br>
@@ -77,7 +85,7 @@
 										<i>➤1. Why did you rewrite the retrieval part? Add more functionlity? Performance improvement?</i>
 									</br>A: This is designed for people with CD, and we do not know if we have connection to internet or not and we want to get local results only (previous knowledge). The main reason I mentioned this is that I want to demonstrate the experience in Linux/bash, grep, awk and so forth.
 									</br><i>➤2. Why after LDA model, the results was improved?</i>
-									</br>A: LDA can find out topic words. And once we filter questions without topic words (a.k.a bad questions), our answering system is able to more question correctly, thereby improves the results.</p>
+									</br>A: LDA can find out topic worpg. And once we filter questions without topic worpg (a.k.a bad questions), our angsring system is able to more question correctly, thereby improves the results.</p>
 								<h4>Sentiment Analysis Project</h4>
 									<p>
 										 <i>➤ 1. More details about RX, example? </i>
@@ -108,8 +116,8 @@ for line in open("xxx.html"):
 									</p>
 							</article>
 
-						<!-- ds -->
-							<article id="ds">
+						<!-- pg -->
+							<article id="pg">
 								<h2 class="major">Data Science</h2>
 								<h3>Preface:</h3>
 								<p>IMHO, science is more about 'why' and what is behind the scene/data/results, e.g. mathematics. And sometimes we can get insights during the evaluation phase rather than the modeling/analysing phase. Analytic skill is the <b>KEY</b>.</p>
@@ -117,7 +125,7 @@ for line in open("xxx.html"):
 								<h4>QA Project</h4>
 									<p>
 										1. Usage of LDA? What exactly did you do?
-									</br>A: I tried different stop words dictionary and different å,ß setting to filter questions without topic words. There is one question remain: How can we define 'bad' questions, or if our answering part failed to answer question conrrectly, should we improve the question generating part or the answering part.
+									</br>A: I tried different stop worpg dictionary and different å,ß setting to filter questions without topic worpg. There is one question remain: How can we define 'bad' questions, or if our angsring part failed to angsr question conrrectly, should we improve the question generating part or the angsring part.
 									</p>
 								<h4>Sentiment Analysis Project</h4>
 								<h4>KDD Cup Project</h4>
@@ -126,7 +134,7 @@ for line in open("xxx.html"):
 						<!-- other -->
 							<article id="other">
 								<h2 class="major">Other Projects</h2>
-								<p>Honestly, I am pondering over a good way to represent/classify them, so that this page follows some logic, I mean, organized. Some are mini projects from web, some are individual ones, some are just ideas but I believe worth talking about, some are open source projects on github. And for the data science project, in terms of methods, deep learning will be my first choice. I believe I will have individual page for each (medium/large) project. Because there will be many things to talk about, like database choice/design, system design. Hopefully, I will be able to deliver a product rather than just a project.</p>
+								<p>Honestly, I am pondering over a good way to represent/classify them, so that this page follows some logic, I mean, organized. Some are mini projects from web, some are individual ones, some are just ideas but I believe worth talking about, some are open source projects on github. And for the data science project, in terms of methopg, deep learning will be my first choice. I believe I will have individual page for each (medium/large) project. Because there will be many things to talk about, like database choice/design, system design. Hopefully, I will be able to deliver a product rather than just a project.</p>
 								<h4>Dota2 match predication</h4>
 								<p>This one has nothing to do with the opendata project on Kaggle. It is my own research. So far I am on the data collection phase.</p>
 								<h4>soccer match predication</h4>
@@ -151,6 +159,7 @@ for line in open("xxx.html"):
 								<h2 class="major">Log</h2>
 								<p>9/7/2017, v0.01 online, very basic.</p>
 								<p>9/29/2017, added SE.</p>
+								<p>10/28/2017, new plan.</p>
 								<p></p>
 							</article>
 
